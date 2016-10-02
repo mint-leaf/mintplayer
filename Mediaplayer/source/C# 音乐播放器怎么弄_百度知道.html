@@ -1,0 +1,2529 @@
+<!DOCTYPE html>
+<!-- saved from url=(0119)http://zhidao.baidu.com/link?url=Mib8mAsoyh_rjPwxlW4RY7etdg6JRaOPTMuKZeFztc6Oo_CJJuzWJRGVAyAhSFX3lLYbdYY4pvXLR66HyMmogK -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK"><script async="" src="./C# 音乐播放器怎么弄_百度知道_files/dp.min.js"></script><script type="text/javascript" async="" src="./C# 音乐播放器怎么弄_百度知道_files/jcnm"></script><script type="text/javascript" async="" src="./C# 音乐播放器怎么弄_百度知道_files/jcnm(1)"></script>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		
+		<meta property="wb:webmaster" content="3aababe5ed22e23c">
+		<meta name="referrer" content="always">
+		<title>C#   音乐播放器怎么弄_百度知道</title>
+		<link rel="shortcut icon" href="http://zhidao.baidu.com/favicon.ico" type="image/x-icon">
+		<link rel="icon" sizes="any" mask="" href="http://www.baidu.com/img/baidu.svg">
+      			
+<script async="" src="./C# 音乐播放器怎么弄_百度知道_files/alog.min.js"></script><script>
+    window.alogObjectConfig = {
+        product: '102',
+        page: '102_3', 
+        monkey_page: 'zhidao-ques',
+        speed_page: '3',
+        speed: {
+            sample: '0.02'
+        },
+         monkey: {
+            sample: '0.01'
+        },
+        exception: { 
+            sample: '0.01'
+        },
+        feature: {
+            sample: '0.01'
+        },
+        cus: {
+            sample: '0.01',
+            custom_metrics: ['c_sbox', 'c_menu', 'c_ask', 'c_best']
+        },
+        csp: {
+            sample: '0.02',
+            'default-src': [
+                {match: '*bae.baidu.com', target: 'Accept,Warn'},
+                {match: '*.baidu.com,*.bdstatic.com,*.bdimg.com,localhost,*.hao123.com,*.hao123img.com', target: 'Accept'},
+                {match: /^(127|172|192|10)(\.\d+){3}$/, target: 'Accept'},
+                {match: '*', target: 'Accept,Warn'}
+            ]
+        }
+    };
+ 
+    void function(a,b,c,d,e,f,g){if(a.alogObjectName=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=a[e].l||+new Date,"https:"===a.location.protocol){if(d="https://gss2.bdstatic.com/70cFsjip0QIZ8tyhnq"+d,!a.alogObjectConfig||!a.alogObjectConfig.sample)return}else d="http://img.baidu.com"+d;var h=!0;if(a.alogObjectConfig&&a.alogObjectConfig.sample){var i=Math.random();a.alogObjectConfig.rand=i,i>a.alogObjectConfig.sample&&(h=!1)}h&&(f=b.createElement(c),f.async=!0,f.src=d,g=b.getElementsByTagName(c)[0],g.parentNode.insertBefore(f,g))}(window,document,"script","/hunter/alog/alog.min.js","alog"),void function(){function a(){}window.PDC={mark:function(a,b){alog("speed.set",a,b||+new Date),alog.fire&&alog.fire("mark")},init:function(a){alog("speed.set","options",a)},view_start:a,tti:a,page_ready:a}}();
+    void function(n){var o=!1;n.onerror=function(n,e,t,c){var i=!0;return!e&&/^script error/i.test(n)&&(o?i=!1:o=!0),i&&alog("exception.send","exception",{msg:n,js:e,ln:t,col:c}),!1},alog("exception.on","catch",function(n){alog("exception.send","exception",{msg:n.msg,js:n.path,ln:n.ln,method:n.method,flag:"catch"})})}(window);
+</script>
+
+		
+		        
+<meta name="keywords" content="音乐播放器\c#">
+<meta name="description" content="C#   音乐播放器怎么弄直接给你个代码吧！using System;using System.Collections.Generic;using System.ComponentModel;using System.Data;using System.Drawing;using System.Text;using System.Windows.Forms;usi">
+<link rel="canonical" href="http://zhidao.baidu.com/question/168041777.html">
+<script>
+        if (location.hash && location.hash.indexOf('bdres2exe=') > -1) {
+            document.write('<script src="http://m.baidu.com/static/as/res2exe/js/res2exe_1.0.3.min.js?v=091818"></' + 'script>');
+        }
+    </script>
+
+		<script type="text/javascript">
+			!function(){var n={},t={};n.context=function(n,e){var i=arguments.length;if(i>1)t[n]=e;else if(1==i){if("object"!=typeof n)return t[n];for(var o in n)n.hasOwnProperty(o)&&(t[o]=n[o])}},"F"in window||(window.F=n)}();;
+			
+            
+																																																												
+			F.context('user', {"isLogin":"1","stoken":"acae2a9ab7bd6f4a053af5df7b12d8de","name":"\u68a6\u5c0f\u9634","imId":"cfcbe6a2a6e5b08fe998b4ec37","id":"938265551","wealth":"9","gradeIndex":"1","encryptedBDUSS":"530bTTLZPPRJA7igF8CxmTVah0C0kNKRHCKgYp1J+gXn4m64tE0Jni6dcRk96A6wGtt+CScMbqQL+1L2E79IKg6BXv9G7NoVMxiDAGmKQoanmWwtl087MMEMSjZA45FgOmS0Ql9y+gLOfIuXIyI6pyB4NwH0BBew8aj3YSZI7sM5WhoIcLA3lhurdQP0NAl\/1cwm6tSGCL1ot\/LXJnanX5AZKYxQyYWGjvyi1xdAR2TfOGYUVSQ3aBhmdbD97nWEqf868fTWYmlKUOZs1hszwC595RitHKXpExyg8BI","ECBD":"pIlz9vXXUdmqrVx8NDDTzXu5EIgxnHfp6boShOrUl3802GXogUdPCWWr8IOIrf51V0gDa+R81mPky13iZrl2LbqwyvuAC\/u+5lp5brSW7yJ5Uvy6QXt\/DmLkqvUgOwzQ6rwmknjNlS28GJsrc7wUAiM6tdFz22hXJwIIMuXIFNYXXih64bjHiO\/dYmsGixYOomnm\/93drVM+j7jedofir1F7VxCHWhQ+MBPOKtp+uS85R8pJ9Tm+7mINE1HfOCvNn9Plw36ZnohtZIZgoL+2PQ==","experience":"410"});
+			F.context('user')['internalAdmin'] = null;
+
+							F.context('defaultQuery', '{"title":"","value":""}');
+									
+					        		        		            		        		            		        		        
+		        F.context({
+		            'sign-in' : {
+		                'isSignIn' : '0',
+		                'signinDays' : '["2016\/8\/29","2016\/8\/30"]',
+		                'speedToday': '0',
+		                'dayNum': '0',
+		                'wealth': '0',
+		                'newDayNum': '0' % 60,
+		                'signCardCanUsed': '5',
+		                'reSignItemId': '70',
+		                'noSignDays': '3',
+		                'maybeSignNum': '0'
+		            } 
+		        });
+		                
+                                                F.context('productsDomain', {
+                'zuoye': 'http://zuoye.baidu.com',
+                'baobao': 'http://baobao.baidu.com',
+                'doctor': 'http://muzhi.baidu.com'
+            });
+            F.context('isQuality', false);
+            F.context('now', 1473330781);
+		</script>
+        <script>F.context('sysTaskAutoInit', 1);</script>
+
+		
+<script type="text/javascript">
+    	var dontTriggerPrompt = true;
+    	
+        F.context('page',{
+        	isAdopted: '1'
+            ,misAsk: '0'
+            ,delAsk: '0'
+            ,isLocked: '0'
+            ,isReplyLocked: '0'
+            ,isFromWap: "0"
+            ,cid: '91'
+            ,cidTop: '74'
+            ,cidMid: '1069'
+            ,qid: '168041777'
+            ,tags: '多媒体软件_C#'
+            ,title: 'C#   音乐播放器怎么弄'
+            ,giveScore: '30'
+                        ,uid: '155395819'
+            ,imId: 'eb26d3f1d3ead0f93130344309'
+            ,passPhoto: '0'
+                                    ,qb_test_case: '16'
+                        ,rpRecommand: 'false'                        ,rankFile: '0' 
+                        ,userName: '玉雨轩104'
+            ,user : {
+                sex: '1'
+                ,iconType: '6'
+                ,gradeIndex: '12'
+                ,gradeIndexC: '十二'
+                                ,grAnswerNum: '596'
+                                                                                                                                                                ,goodRate: '45'
+                            }
+                                    ,con: '请说的详细些'
+                                    ,supply: '<p>那个控件怎么添加？<\/p><p><a href=\x22http:\/\/f.hiphotos.baidu.com\/zhidao\/pic\/item\/0eb30f2442a7d9339d964503ad4bd11373f00187.jpg\x22 target=\x22_blank\x22 title=\x22点击查看大图\x22 class=\x22ikqb_img_alink\x22><img class=\x22ikqb_img\x22 src=\x22http:\/\/f.hiphotos.baidu.com\/zhidao\/wh%3D600%2C800\/sign=022f859fa9ec8a13144f5fe6c733bdb7\/0eb30f2442a7d9339d964503ad4bd11373f00187.jpg\x22 esrc=\x22http:\/\/f.hiphotos.baidu.com\/zhidao\/wh%3D450%2C600\/sign=37d36343918fa0ec7f926c0913a775d8\/0eb30f2442a7d9339d964503ad4bd11373f00187.jpg\x22 \/><\/a><\/p>'
+            ,richSupply: true
+                        ,answerNum: '2'
+            ,isView: '1'
+            ,isGetWealth:'0'
+                        ,pgcArr: [790,791,792,794,795]
+            ,isCompanyIask: '0'
+            ,bdplayer:'mozilla\/5.0 (windows nt 10.0; wow64) applewebkit\/537.36 (khtml, like gecko) chrome\/50.0.2661.102 ubrowser\/5.7.15319.202 safari\/537.36'
+        });
+        
+        F.context('user')['internalAdmin'] = null;
+
+                	F.context('user')['isAsker'] = '0';
+        	F.context('user')['isReplyer'] = '0';
+            F.context('user')['uid'] = '938265551';
+            F.context('user')['answerNumber'] = '0';
+            F.context('user')['isNew'] = '0';
+            F.context('user')['isHaveCid'] = '0';
+            F.context('user')['stoken'] = 'acae2a9ab7bd6f4a053af5df7b12d8de';
+            F.context('user')['isMavin'] = '0';
+            F.context('businessToken', '');
+            
+            F.context('user')['replyBold'] = '0';
+            F.context('user')['replyRed'] = '0';
+            F.context('user')['delSelfReply'] = '0';
+            F.context('user')['delSelfQuestion'] = '0';
+            F.context('user')['highQualityNum'] = '0';
+            F.context('privilege', {
+                                                    'replyBold': {
+                        'is_card': '0',
+                        'remain_time': '',
+                        'number': '0',
+                        'days': ''
+                    },
+                                                                    'replyRed': {
+                        'is_card': '0',
+                        'remain_time': '',
+                        'number': '0',
+                        'days': ''
+                    }
+                                            });
+                            F.context('answers', {});
+        F.context('relateWords', {});
+                F.context('egg', {
+            id: '8'
+            ,flashUrl: 'http:\/\/img.iknow.bdimg.com\/gglft\/gglft_flash.swf'
+            ,onlineTime: '2013-11-15'
+            ,offlineTime: '2013-12-01'
+            ,loginRate: '0.7'
+            ,notLoginRate: '0.3'
+            ,targetUrl: 'http:\/\/zhidao.baidu.com\/s\/gglft\/index.html?isegg=1'
+            ,btnText: '确定'
+            ,dialogText: '恭喜你捡到一张刮刮卡，立刻参与刮刮乐翻天活动，拍立得、iPad mini、iPhone 5手机等超多大奖等你刮出来~'
+            ,dialogBackground: ''
+            ,dialogTextMargin: '0'
+            ,active: '0'
+            ,activeUrl: ''
+            ,activeStatus: ''
+            ,guideLogin: '1'
+            ,dialogTextLogin: ''
+            ,btnTextLogin: ''
+            ,dialogTextActive: ''
+            ,btnTextActive: ''
+            ,dialogBackground: ''
+            ,limitGrade: '0'
+            ,limitGoodRate: '0'
+        });
+                        F.context('cmsTopic', [
+                                    {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/qinliugan.html',
+                'title': 'H7N9禽流感病毒问题解答',
+                'qid': '538944731,538944974,538945159,538945410,538945640,538945806,538946023,538947972,538948119,538948841,538948985,538949170,538949278,538949607,538951811,538952044,538952289,539260208,539271130,539272340,539272652,539272848,539273004,538758680,537145971,537481975,537482138,537491741,537496345,537145971,539271582,539310838,96016332,16608956,16608956,534580619',
+                'expert': ''
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen18.html',
+                'title': '传统医学解读人体奥秘',
+                'qid': '',
+                'expert': '正安中医梁冬,薄化君大夫,罗炳翔大夫'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen17.html',
+                'title': '我们有文化，遇见“流氓”也不怕！',
+                'qid': '',
+                'expert': '打假第一人王海'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/topic\/zhichangtiaocao\/index.html',
+                'title': '跳槽前必读8大问题',
+                'qid': '530550652,530550695,530550746,530550777,530550821,530550859,530550898,530550937',
+                'expert': ''
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/topic\/zhichangmianshi\/index.html',
+                'title': 'HR不懂爱，他的提问你答不来！',
+                'qid': '529252350,529252523,529252831,529253040,529253301,529253429,529256645,529256979,529257198,529257285',
+                'expert': ''
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen16.html',
+                'title': '孙云晓解答青春叛逆期教育',
+                'qid': '',
+                'expert': '青研中心孙云晓'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen16.html',
+                'title': '孙宏艳解答青春叛逆期教育',
+                'qid': '',
+                'expert': '青研中心孙宏艳'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen15.html?fr=qbzt',
+                'title': '雷明解答职场中的跳槽疑惑',
+                'qid': '',
+                'expert': '心理咨询雷明'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen15.html?fr=qbzt',
+                'title': '唐宁解答女性职场疑惑',
+                'qid': '',
+                'expert': '职场唐宁'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen14.html?fr=qbzt',
+                'title': '北大售票帝裴济洋教你买票回家！',
+                'qid': '',
+                'expert': 'peijiyang_pku'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/jiaogui.html?fr=qbzt',
+                'title': '权威解读2013驾考新规',
+                'qid': '496005611,105728210',
+                'expert': ''
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/topic\/shi\/index.html?fr=qbzt',
+                'title': '被误读最深的名言锦句',
+                'qid': '510380393,510380025,510380524,510380639,510380685,510380918,510381072,510380301',
+                'expert': ''
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen13.html?fr=qbzt',
+                'title': '交管局李晓东处长解答驾考新规',
+                'qid': '',
+                'expert': '交管局李晓东'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen13.html?fr=qbzt',
+                'title': '交管局李勤处长解读新交规',
+                'qid': '',
+                'expert': '交管局李勤'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen12.html?fr=qbzt',
+                'title': '胡柳解答保险理财',
+                'qid': '',
+                'expert': '保险理财胡柳'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen12.html?fr=qbzt',
+                'title': '魏德善解答证券投资',
+                'qid': '',
+                'expert': '证券专家魏德善'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen06.html?fr=qbzt',
+                'title': '金韵蓉老师教你精油护肤',
+                'qid': '',
+                'expert': 'lafasojyr'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/topic\/kuaidu\/suhuaji\/index.html?fr=qbzt',
+                'title': '你的食物含塑化剂吗',
+                'qid': '499771676,274675532,273938276,275181078,274282140,499772730,275226786,274536152,282757232,274210910,275395808,499772593,275355018,274093929',
+                'expert': ''
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/topic\/kuaidu\/youjia\/index.html?fr=qbzt',
+                'title': '油价是升还是降',
+                'qid': '7701062,7720360,23590745,239386624,302573038,218721231,337321559',
+                'expert': ''
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/topic\/kuaidu\/2012usa\/index.html?fr=qbzt',
+                'title': '美国总统是如何选出来的',
+                'qid': '494863184,494863014,494869926,494869853,494868987',
+                'expert': ''
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/topic\/Chicken\/index.html?fr=qbzt',
+                'title': '45天鸡能不能吃',
+                'qid': '503005578,503006139,503006460,503006854,503007374,503007374',
+                'expert': ''
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/topic\/1942\/index.html?fr=qbzt',
+                'title': '你知道1942吗？',
+                'qid': '502766042,502766042,502647814,502647814,502777253,502776800,502650170,502650170',
+                'expert': ''
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/topic\/jiehuo\/jiankangyaoyan\/index.html?fr=qbzt',
+                'title': '健康流言知真假',
+                'qid': '178807906,334055366,498402753,291937633,209426382,414548424,7540625,222613405,498406267,498408474,109760622,388525641',
+                'expert': ''
+            },
+                                                {
+                'url': 'http:\/\/www.baidu.com\/search\/zhidao\/jingshenbing\/index.html?fr=qbzt',
+                'title': '大家都有病',
+                'qid': '492345830,491605430,492350128,492350240,492350299,281444990,492440880,489745109,492443590,492443722',
+                'expert': ''
+            },
+                                                {
+                'url': 'http:\/\/www.baidu.com\/search\/zhidao\/gangnamstyle\/index.html?fr=qbzt',
+                'title': '江南Style红的很科学',
+                'qid': '478958350,487057430,483904315,485109741,487057528,485109517,487057485,487057395,487057395,487057363,480719567',
+                'expert': ''
+            },
+                                                {
+                'url': 'http:\/\/www.baidu.com\/search\/zhidao\/bing\/index.html?fr=qbzt',
+                'title': '其实这都不是病',
+                'qid': '480816980,480792024,481137959,480812943,480813792',
+                'expert': ''
+            },
+                                                {
+                'url': 'http:\/\/www.baidu.com\/search\/zhidao\/aizheng\/index.html?fr=qbzt',
+                'title': '吃也会得癌症！',
+                'qid': '328576004,480213867,480213973,480218158,480232828',
+                'expert': ''
+            },
+                                                {
+                'url': 'http:\/\/www.baidu.com\/search\/zhidao\/2012gongfu\/index.html?fr=qbzt',
+                'title': '江湖神功知多少',
+                'qid': '475780308,473798866,475780429,473806239,475780510,473800706,475780712,475782468,475780619,473801366',
+                'expert': ''
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen11.html?fr=qbzt',
+                'title': '姚海峰医生解答宠物健康',
+                'qid': '',
+                'expert': '姚海峰博士'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen11.html?fr=qbzt',
+                'title': '王天明专业解答宠物营养',
+                'qid': '',
+                'expert': '宠物营养'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen10.html?fr=qbzt',
+                'title': '苏芩谈远离爱留下的伤',
+                'qid': '',
+                'expert': '知名作家苏芩'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen08.html?fr=qbzt',
+                'title': '张国庆分析中日关系',
+                'qid': '',
+                'expert': '社科院张国庆'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen06.html?fr=qbzt',
+                'title': '小P老师教你彩妆造型',
+                'qid': '',
+                'expert': 'yoka小P老师'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen06.html?fr=qbzt',
+                'title': '梅琳老师教你美肌护肤',
+                'qid': '',
+                'expert': 'lafasoml'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen06.html?fr=qbzt',
+                'title': '美丽主持人李静的美容问答',
+                'qid': '',
+                'expert': 'lafasolj'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen05.html?fr=qbzt',
+                'title': '伊能静解答如何演电影',
+                'qid': '',
+                'expert': 'yinengjing2013'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen05.html?fr=qbzt',
+                'title': '导演赵林山揭秘电影',
+                'qid': '',
+                'expert': 'daoyanzls'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen05.html?fr=qbzt',
+                'title': '五岳散人谈美食',
+                'qid': '',
+                'expert': 'wysr2012'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen04.html?fr=qbzt',
+                'title': '早教专家李跃儿谈早教',
+                'qid': '',
+                'expert': 'lyer2013bd'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen04.html?fr=qbzt',
+                'title': '产科主任余梅教孕产',
+                'qid': '',
+                'expert': 'ym2013bd'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/topic\/muru\/index.html?fr=qbzt',
+                'title': '妈妈最关心的8个问题',
+                'qid': '526309070,526865300,526865300,526308815,526865218,526865157,526865101,526865101,526309710,526865031',
+                'expert': ''
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen03.html?fr=qbzt',
+                'title': '健身专家王友松教健身',
+                'qid': '',
+                'expert': 'wangyousong7'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen03.html?fr=qbzt',
+                'title': '顾中一教你健康营养',
+                'qid': '',
+                'expert': 'guzhongyi'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen03.html?fr=qbzt',
+                'title': '李湘教你减肥秘诀',
+                'qid': '',
+                'expert': 'lixiangzslx'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/zhishilingxiu02.html?fr=qbzt',
+                'title': '心血管病专家贾玉和谈病痛',
+                'qid': '',
+                'expert': 'jiayuhe7'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/zhishilingxiu02.html?fr=qbzt',
+                'title': '糖尿病专家向红丁谈病痛',
+                'qid': '',
+                'expert': 'xianghongd3'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/zhishilingxiu01.html?fr=qbzt',
+                'title': '金领小V谈职场生存学',
+                'qid': '',
+                'expert': '小V2013'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/zhishilingxiu01.html?fr=qbzt',
+                'title': '杜子建说创业',
+                'qid': '',
+                'expert': '杜子建2012'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen08.html?fr=qbzt',
+                'title': '张召忠谈钓鱼岛争端',
+                'qid': '',
+                'expert': 'zshaozhong2012'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen07.html?fr=qbgl',
+                'title': '崔玉涛谈婴幼儿护理',
+                'qid': '',
+                'expert': '儿科医生崔玉涛'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/zhishilingxiu02.html?fr=qbzt',
+                'title': '急诊女超人于莺谈病痛',
+                'qid': '',
+                'expert': 'yuyingjzk'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/zhishilingxiu01.html?fr=qbzt',
+                'title': '薛蛮子谈天使投资',
+                'qid': '',
+                'expert': '薛蛮子2012'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/wowen09.html?fr=qbgl',
+                'title': '郑渊洁让童年如童话',
+                'qid': '',
+                'expert': '作家郑渊洁'
+            },
+                                                {
+                'url': 'http:\/\/zhidao.baidu.com\/s\/maya.html?fr=qbgl',
+                'title': '2012世界末日真相',
+                'qid': '384640140,193245477,62563072,306563588,158114723,409478947,12992979,129335529,84523086,13774477,161887534',
+                'expert': ''
+            }
+                                ]);
+                        
+        
+        F.context('isForAnswerHq', '0');
+                F.context({
+            'itopicSyncAdminStr': '["553869863","408584470","663150510","1601193224","1305370811","1253985996","240173754","2421480383","282555480","617337308","703281543","1824698773","2560348928","49725318","220659661","161331174","1372601133","1969665018"]'
+        });
+    </script>
+
+        <!--[if lte IE 8]>
+            <script>
+                (function(){
+                    var e="abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(","),
+                    i=e.length;
+                    while(i--){document.createElement(e[i])}
+                 })();
+            </script>
+        <![endif]-->
+	<link rel="stylesheet" type="text/css" href="./C# 音乐播放器怎么弄_百度知道_files/common_955c6f0.css"><link rel="stylesheet" type="text/css" href="./C# 音乐播放器怎么弄_百度知道_files/sample_aio_0653a56.css"><link rel="stylesheet" type="text/css" href="./C# 音乐播放器怎么弄_百度知道_files/top-nav-bar_049b421.css"><link rel="stylesheet" type="text/css" href="./C# 音乐播放器怎么弄_百度知道_files/bottom-union_d935508.css"><script> alog('speed.set', 'ht', +new Date); </script><script src="./C# 音乐播放器怎么弄_百度知道_files/ue.js"></script><script charset="GBK" src="./C# 音乐播放器怎么弄_百度知道_files/wordner"></script><script type="text/javascript" src="./C# 音乐播放器怎么弄_百度知道_files/video_fe31aae.js"></script><style>@font-face{font-family:uc-nexus-iconfont;src:url(chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_1471832554_080215.woff) format('woff'),url(chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_1471832554_080215.ttf) format('truetype')}</style><script type="text/javascript" src="./C# 音乐播放器怎么弄_百度知道_files/submitjump_6da7329.js"></script><script type="text/javascript" src="./C# 音乐播放器怎么弄_百度知道_files/accuse_5ce5fb1.js"></script></head>
+    
+    
+    
+
+
+	<body class="layout-center has-menu home-search"><div id="BAIDU_DUP_fp_wrapper" style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;"><iframe id="BAIDU_DUP_fp_iframe" src="./C# 音乐播放器怎么弄_百度知道_files/o.html" style="width: 0px; height: 0px; visibility: hidden; display: none;"></iframe></div>
+		
+            
+<div id="userbar" class="userbar userbar-new" data="">
+            <ul class="aside-list">
+            <li>
+                            <a href="http://www.baidu.com/p/%E6%A2%A6%E5%B0%8F%E9%98%B4?from=zhidao" class="user-name" target="_blank" id="user-name">梦小阴<i class="i-arrow-down"></i></a></li>
+                <li>
+                <span id="user-grade" class="user-grade">LV1</span>
+                </li>
+                        
+                        <li alog-alias="userbar-msg" id="userbar-msg"><span class="i-msg" style="display:none;"></span><a href="http://zhidao.baidu.com/ihome/notice/all" target="_blank">消息<span class="orange-num"><i></i></span></a></li>
+            <li alog-alias="baidu-msg" id="baidu-msg"><a title="私信" href="http://msg.baidu.com/" target="_blank"><i class="bd-msg"></i></a></li>
+            <li class="shop-entrance">
+                <a href="http://zhidao.baidu.com/shop" title="知道商城"><i class="i-house"></i></a>
+                                    <span class="lucky-try"></span>
+                            </li>
+        </ul>
+        <div class="sublist-container username-sublist" style="top: 10px; display: none;" id="username-sublist">
+            <div class="sublist-arrow-up"></div>
+            <ul class="sub-list">
+                                <li><a id="userbar-myinfo" href="http://www.baidu.com/p/%E6%A2%A6%E5%B0%8F%E9%98%B4?from=zhidao" target="_blank">我的主页</a></li>
+                                <li><a id="userbar-my-ask" href="http://zhidao.baidu.com/ihome/ask?tab=1" target="_blank">我的提问</a></li>
+                <li><a id="userbar-my-answer" href="http://zhidao.baidu.com/ihome/answer?tab=1" target="_blank">我的回答</a></li>
+                <li><a id="userbar-my-task" href="http://zhidao.baidu.com/ihome/task/index?tab=1" target="_blank">我的任务</a></li><li><a id="userbar-account" href="http://passport.baidu.com/center" target="_blank">帐号设置</a></li>
+                <li class="last"><a href="http://passport.baidu.com/?logout&amp;aid=7&amp;u=http%3A//zhidao.baidu.com/link%3Furl%3DMib8mAsoyh_rjPwxlW4RY7etdg6JRaOPTMuKZeFztc6Oo_CJJuzWJRGVAyAhSFX3lLYbdYY4pvXLR66HyMmogK" id="userbar-logout">退出帐号</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+		
+        
+		
+                
+    <div class="head-wrap">
+        <header id="header" class="container">
+                            <a href="http://zhidao.baidu.com/activity/xiaojudeng" title="" target="_blank" class="adTopImg" style="background:url(http://iknow03.bosstatic.bdimg.com/tuiguangwei/xiaojudeng20070.png);"></a>
+                        
+                <div id="search-box" class="search-box line">
+    <a class="logo" href="http://zhidao.baidu.com/" title="百度知道"></a>
+    <ul class="channel grid">
+        <li><a log="sc_pos:c_news" rel="nofollow" href="http://news.baidu.com/">新闻</a></li> 
+        <li><a log="sc_pos:c_baidu" rel="nofollow" href="http://www.baidu.com/">网页</a></li> 
+        <li><a log="sc_pos:c_tieba" rel="nofollow" href="http://tieba.baidu.com/">贴吧</a></li> 
+        <li><strong>知道</strong></li> 
+        <li><a log="sc_pos:c_mp3" rel="nofollow" href="http://music.baidu.com/">音乐</a></li> 
+        <li><a log="sc_pos:c_pic" rel="nofollow" href="http://image.baidu.com/">图片</a></li>
+        <li><a log="sc_pos:c_video" rel="nofollow" href="http://v.baidu.com/">视频</a></li> 
+        <li><a log="sc_pos:c_map" rel="nofollow" href="http://map.baidu.com/">地图</a></li> 
+        <li><a log="sc_pos:c_baike" rel="nofollow" href="http://baike.baidu.com/">百科</a></li> 
+        <li><a log="sc_pos:c_doc" rel="nofollow" href="http://wenku.baidu.com/">文库</a></li>
+        <li><a log="sc_pos:c_jingyan" href="http://jingyan.baidu.com/">经验</a></li>
+    </ul>
+
+    <form action="http://zhidao.baidu.com/search" name="search-form" method="get" id="search-form" class="search-form">
+        <input class="hdi" id="kw" maxlength="256" tabindex="1" size="46" name="word" value="" autocomplete="off">
+        <button alog-action="g-search-anwser" type="submit" id="search-btn" hidefocus="true" tabindex="2" class="btn-global">搜索答案</button>
+        <a href="http://zhidao.baidu.com/link?url=Mib8mAsoyh_rjPwxlW4RY7etdg6JRaOPTMuKZeFztc6Oo_CJJuzWJRGVAyAhSFX3lLYbdYY4pvXLR66HyMmogK#" alog-action="g-i-ask" class="i-ask-link" id="ask-btn">我要提问</a>
+    </form>
+</div>
+
+                <script>
+                    // 搜索框可用时间打点
+                    alog && alog('speed.set', 'c_sbox', +new Date); alog.fire && alog.fire("mark");
+                </script>
+            
+        </header>
+    </div>
+        
+<div class="nav-menu-container" id="j-nav-menu-container">
+    <div class="nav-show-control" style="overflow: hidden;">
+        <div class="nav-menu-layout">
+            <div class="nav-menu line">
+                <div class="nav-menu-content container">
+                    <div class="content-box">
+                        <div class="menu-item menu-item-index">
+                            <a class="menu-title " href="http://zhidao.baidu.com/">
+                                首页
+                            </a>
+                        </div>
+                        <div class="menu-item-box">
+                            <div class="menu-item menu-item-cat">
+                                <a class="menu-title " href="http://zhidao.baidu.com/list?fr=daohang" target="_blank">
+                                    问题
+                                </a>
+                                <div class="menu-content">
+                                    <ul class="menu-sub-list">
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/list?fr=daohang" target="_blank">
+                                                全部问题
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/list?cid=101?fr=daohang" target="_blank">
+                                                经济金融
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/list?cid=102?fr=daohang" target="_blank">
+                                                企业管理
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/list?cid=103?fr=daohang" target="_blank">
+                                                法律法规
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/list?cid=104?fr=daohang" target="_blank">
+                                                社会民生
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/list?cid=105?fr=daohang" target="_blank">
+                                                科学教育
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/list?cid=106?fr=daohang" target="_blank">
+                                                健康生活
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/list?cid=107?fr=daohang" target="_blank">
+                                                体育运动
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/list?cid=108?fr=daohang" target="_blank">
+                                                文化艺术
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/list?cid=109?fr=daohang" target="_blank">
+                                                电子数码
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/list?cid=110" target="_blank">
+                                                电脑网络
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/list?cid=111?fr=daohang" target="_blank">
+                                                娱乐休闲
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/list?cid=113?fr=daohang" target="_blank">
+                                                行政地区
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/list?cid=114?fr=daohang" target="_blank">
+                                                心理分析
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/list?cid=115?fr=daohang" target="_blank">
+                                                医疗卫生
+                                            </a>
+                                        </li>
+                                        <!-- <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="/list?cid=116?fr=daohang" target="_blank" target="_blank">
+                                                资源共享
+                                            </a>
+                                        </li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="menu-item menu-item-lanmu">
+                                <a class="menu-title" href="javascript:;">
+                                    专栏
+                                </a>
+                                <div class="menu-content">
+                                    <ul class="menu-sub-list">
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/daily?fr=daohang" target="_blank">
+                                                知道日报
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/liuyan?fr=daohang" target="_blank">
+                                                真相问答机
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/bigdata/view" target="_blank">
+                                                知道大数据
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/special/home?fr=daohang" target="_blank">
+                                                知道多世界
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/culture/index?fr=daohang" target="_blank">
+                                                知道非遗
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="menu-item menu-item-user">
+                                <a class="menu-title" href="javascript:;">
+                                    用户
+                                </a>
+                                <div class="menu-content">
+                                    <ul class="menu-sub-list">
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/zhima/" target="_blank">
+                                                知道芝麻
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/misc/nowshowstar?fr=daohang" target="_blank">
+                                                知道之星
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/user/admin?fr=daohang" target="_blank">
+                                                芝麻将
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/uteam?fr=daohang" target="_blank">
+                                                芝麻团
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/hangjia?fr=daohang" target="_blank">
+                                                知道行家
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/daily/authorcenter?fr=daohang" target="_blank">
+                                                日报作者
+                                            </a>
+                                        </li>
+                                        <div class="menu-item-user-list">机构合作<div class="line-bar"></div></div>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/hangjia?fr=daohang" target="_blank">
+                                                机构行家
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/opendev?fr=daohang" target="_blank">
+                                                开放平台
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/special/view/cooperation?fr=daohang" target="_blank">
+                                                品牌合作
+                                            </a>
+                                        </li>
+                                        <div class="menu-item-user-list">知道福利<div class="line-bar"></div></div>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/shop?fr=daohang" target="_blank">
+                                                财富商城
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item" href="http://zhidao.baidu.com/s/activity/index.html?fr=daohang" target="_blank">
+                                                知道活动
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="menu-item menu-item-expert">
+                                <a class="menu-title" href="javascript:;">
+                                    特色
+                                </a>
+                                <div class="menu-content">
+                                    <ul class="menu-sub-list">
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item menu-sub-item-expert" href="http://jingyan.baidu.com/" target="_blank">
+                                                <span class="expert-icon expert-icon-jy"></span>
+                                                <span>经验</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item menu-sub-item-expert" href="http://wenka.baidu.com/" target="_blank">
+                                                <span class="expert-icon expert-icon-ka"></span>
+                                                <span>问咖</span><i class="i-new ml-5"></i>
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item menu-sub-item-expert" href="http://baobao.baidu.com/" target="_blank">
+                                                <span class="expert-icon expert-icon-baby"></span>
+                                                <span>宝宝知道</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item menu-sub-item-expert" href="http://muzhi.baidu.com/?from=submenu" target="_blank">
+                                                <span class="expert-icon expert-icon-doctor"></span>
+                                                <span>拇指医生</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-sub-item-wp">
+                                            <a class="menu-sub-item menu-sub-item-expert" href="http://zuoye.baidu.com/" target="_blank">
+                                                <span class="expert-icon expert-icon-zuoye"></span>
+                                                <span>作业帮</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-right-section">
+                            <ul class="menu-right-list">
+                                <li class="menu-right-list-item zhidao-app">
+                                    <a href="http://zhidao.baidu.com/zt/ikapp/index.html?fr=home" class="menu-right-list-link" target="_blank">
+                                        <span class="item-icon">
+                                            
+                                        </span>
+                                        <span class="item-name">
+                                            手机版
+                                        </span>
+                                    </a>
+                                    <span class="right-list-item-devide">
+                                        
+                                    </span>
+                                </li>
+                                <li class="menu-right-list-item user-center">
+                                    <a href="http://zhidao.baidu.com/ihome" class="menu-right-list-link" target="_blank">
+                                        <span class="item-icon">
+                                            
+                                        </span>
+                                        <span class="item-name">
+                                            我的知道
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+        // 导航可用时间
+        alog && alog('speed.set', 'c_menu', +new Date); alog.fire && alog.fire("mark");
+    </script>
+
+
+    <div id="body" class="container">
+        
+<div class="layout-wrap">
+<div id="top-nav-bar" class="top-nav-bar" style="display: none;">
+<div class="container2">
+<a class="toplogo" href="http://zhidao.baidu.com/" title="百度知道"></a>
+<div class="topsearch">
+<form action="http://zhidao.baidu.com/search" name="search-nav-form" id="search-nav-form" method="get">
+<input class="hdi" id="nav-kw" maxlength="256" tabindex="1" size="46" name="word" value="" autocomplete="off">
+<button alog-action="g-search-anwser" type="submit" id="search-btn-nav" hidefocus="true" tabindex="2" class="i-search-link">搜索答案</button>
+</form>
+</div>
+</div>
+</div>
+<div style="display:none">
+<nav class="wgt-nav f-12" alog-group="qb-cate-nav">
+<a href="http://zhidao.baidu.com/">百度知道</a>
+&gt;<a href="http://zhidao.baidu.com/browse/74">电脑/网络</a>
+&gt;<a href="http://zhidao.baidu.com/browse/1069">常见软件</a>
+&gt;<a href="http://zhidao.baidu.com/browse/91">多媒体软件</a>
+</nav>
+</div>
+<section class="line qb-section">
+<article class="grid qb-content" id="qb-content">
+<div class="wgt-ask accuse-response line mod-shadow" id="wgt-ask">
+<h1 accuse="qTitle">
+<i class="iknow-qb_home_icons i-status-being grid mr-10"></i>
+<span class="ask-title ">C#   音乐播放器怎么弄</span>
+</h1>
+<div class="line mt-5 q-content" accuse="qContent">
+<span class="con">请说的详细些</span>
+</div>
+<div class="line mt-10 q-supply-content" accuse="qSupply" style="display:none"><p>那个控件怎么添加？</p><p><a href="http://f.hiphotos.baidu.com/zhidao/pic/item/0eb30f2442a7d9339d964503ad4bd11373f00187.jpg" target="_blank" title="点击查看大图" class="ikqb_img_alink" rel="nofollow"><img class="ikqb_img" src="./C# 音乐播放器怎么弄_百度知道_files/0eb30f2442a7d9339d964503ad4bd11373f00187.jpg" esrc="http://f.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=37d36343918fa0ec7f926c0913a775d8/0eb30f2442a7d9339d964503ad4bd11373f00187.jpg"></a></p></div>
+<div class="line f-aid ask-info ff-arial" id="ask-info">
+<span class="grid-r ask-time">
+<ins class="share-area"><div class="others-share"><a href="javascript:void(0)" target="_blank" class="others-share-item weixin iknow-qb_share_icons" data-type="weixin-click"></a><a href="http://v.t.sina.com.cn/share/share.php?url=http%3A%2F%2Fzhidao.baidu.com%2Fquestion%2F168041777%3Fsharesource%3Dweibo&amp;title=C%23%20%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E6%80%8E%E4%B9%88%E5%BC%84_%E7%99%BE%E5%BA%A6%E7%9F%A5%E9%81%93&amp;pic=http%3A%2F%2Fimg.baidu.com%2Fimg%2Fiknow%2Fzhidaologo.png" target="_blank" class="others-share-item weibo iknow-qb_share_icons" data-type="weibo-click"></a><a href="http://connect.qq.com/widget/shareqq/index.html?url=http%3A%2F%2Fzhidao.baidu.com%2Fquestion%2F168041777%3Fsharesource%3Dqq&amp;title=C%23%20%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E6%80%8E%E4%B9%88%E5%BC%84_%E7%99%BE%E5%BA%A6%E7%9F%A5%E9%81%93&amp;pics=http%3A%2F%2Fimg.baidu.com%2Fimg%2Fiknow%2Fzhidaologo.png" target="_blank" class="others-share-item qq iknow-qb_share_icons" data-type="qq-click"></a><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http%3A%2F%2Fzhidao.baidu.com%2Fquestion%2F168041777%3Fsharesource%3Dqzone&amp;title=C%23%20%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E6%80%8E%E4%B9%88%E5%BC%84_%E7%99%BE%E5%BA%A6%E7%9F%A5%E9%81%93&amp;pics=http%3A%2F%2Fimg.baidu.com%2Fimg%2Fiknow%2Fzhidaologo.png" target="_blank" class="others-share-item qzone iknow-qb_share_icons" data-type="qzone-click"></a></div></ins>
+</span>
+<a class=" f-black" alog-action="qb-ask-uname" rel="nofollow" href="http://www.baidu.com/p/%E7%8E%89%E9%9B%A8%E8%BD%A9104?from=zhidao" target="_blank">玉雨轩104</a>
+<span id="v-times" class="f-pipe" style="">|</span><span class="browse-times"> 浏览 5030 次</span>
+<span class="f-pipe"></span>
+<span>2010-07-19 09:53</span>
+<ins class="accuse-area" style="display: none;"></ins>
+</div>
+</div>
+<script>
+    // 提问区域可用时间
+    alog && alog('speed.set', 'c_ask', +new Date); alog.fire && alog.fire("mark");
+</script>
+<script type="text/javascript">
+        F.context('answers')['2243092563'] = {uid:"1074262687",imId:"9ff2e4b880e9aa91e5bd93e5908e0740",passPhoto:"1",id:"2243092563",userName:"一骑当后",userNameEnc:"%D2%BB%C6%EF%B5%B1%BA%F3",user:{sex:"2",iconType:"6",gradeIndex:"20",grAnswerNum:"36120",isFromTeam:"1",teamName:"电脑网络行家",teamId:"85779",isAuth:"0",authTitle:"",isUserAdmin:"1",userAdminLevel:"12",userAdminTitle:"中级芝麻将",userAdminType:"2",isFamous:"0",isMaster:"0",goodRate:"96",mavinUtype:"0",mavinIsNew:"1",mavinName:"一骑当后",mavinTitle:"技术顾问",mavinAnswerNum:"5.1万",mavinAdoptNum:"3.6万",mavinLevel:"3",mavinLevelTitle:"知道电脑行家",mavinMajor:"1",mavinHelpNum:"3342万",mavinPraise:"7.7万",mavinLevelDesc:"电脑行业资深行家",mavinFields: ["电脑"],mavinAvatar:"http://d.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=a0920f8530d12f2ece50a6647af2f954/4e4a20a4462309f74b2cc340740e0cf3d7cad625.jpg",mavinDesc:"网络、设备维护、电路、弱电检测。"},isAnonymous:"0",isCurrentUser:"0",mapUrl:"",refer:"",replyAskNum:"",threadId:"8972370253",hasComment:"0",qid:"168041777",raid:"",recommendCanceled:"0"};
+            </script>
+<div class="wgt-best mod-shadow" id="best-answer-2243092563">
+<div class="hd line ">
+<span class="grid-r f-aid pos-time answer-time">
+2015-07-03 09:54
+</span>
+<div id="act-link-banner-wp" class="grid-r"></div>
+<span class="iknow-qb_home_icons answer-type answer-best grid"></span>
+<span class="answer-title h2 grid">最佳答案</span>
+</div>
+<div class="bd answer" id="answer-2243092563">
+<div class="line info f-aid">
+</div>
+<div class="line content">
+<pre id="best-content-2243092563" accuse="aContent" class="best-text mb-10" style="min-height: 55px;">实现C#<a href="https://www.baidu.com/s?wd=%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8&amp;tn=44039180_cpr&amp;fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1Y3uWnsmWw-nj6LuhD3PA790ZwV5Hcvrjm3rH6sPfKWUMw85HfYnjn4nH6sgvPsT6KdThsqpZwYTjCEQLGCpyw9Uz4Bmy-bIi4WUvYETgN-TLwGUv3EnHm3njfkP1TL" target="_blank" class="baidu-highlight" rel="nofollow">音乐播放器</a>代码如下：<br>using System;<br>using System.Collections.Generic;<br>using System.ComponentModel;<br>using System.Data;<br>using System.Drawing;<br>using System.Text;<br>using System.Windows.Forms;<br>using System.IO;<br><br>namespace MP3File<br>{<br>    public partial class frmMain : Form<br>    {<br>        public frmMain()<br>        {<br>            InitializeComponent();<br>        }<br><br>        /// &lt;summary&gt;<br>        /// 浏览MP3文件<br>        /// &lt;/summary&gt;<br>        /// &lt;param name="sender"&gt;&lt;/param&gt;<br>        /// &lt;param name="e"&gt;&lt;/param&gt;<br>        private void btn_Open_Click(object sender, EventArgs e)<br>        {<br>            if (this.oFDlog_Info.ShowDialog() == DialogResult.OK)<br>            {<br>                this.lV_Info.Items.Clear();<br>                string[] FileNames = this.oFDlog_Info.FileNames;<br>                foreach (string FileName in FileNames)<br>                {<br>                    //取得文件大小<br>                    FileInfo FileInfo = new FileInfo(FileName);<br>                    float FileSize = (float)FileInfo.Length / (1024 * 1024);<br>                    this.axMP_Info.FileName = FileName;<br>                    //取得作者信息<br>                    string Author = this.axMP_Info.GetMediaInfoString(MediaPlayer.MPMediaInfoType.mpClipAuthor);<br>                    //取得不含路径的文件名<br>                    string ShortFileName = FileName.Substring(FileName.LastIndexOf("\\") + 1);<br>                    ShortFileName = ShortFileName.Substring(0, ShortFileName.Length - 4);<br>                    //填充歌曲列表 <br>                    string[] SubItem ={ ShortFileName, Author, FileSize.ToString().Substring(0, 4) + "M", FileName };<br>                    ListViewItem Item = new ListViewItem(SubItem);<br>                    this.lV_Info.Items.Add(Item);<br>                    this.lV_Info.Items[0].Selected = true;<br>                }<br>            }<br>        }<br><br>        /// &lt;summary&gt;<br>        /// 播放MP3文件<br>        /// &lt;/summary&gt;<br>        /// &lt;param name="sender"&gt;&lt;/param&gt;<br>        /// &lt;param name="e"&gt;&lt;/param&gt;<br>        private void btn_Play_Click(object sender, EventArgs e)<br>        {<br>            if (this.lV_Info.Items.Count &gt; 0)<br>            {<br>                if (this.lV_Info.SelectedItems.Count &gt; 0)<br>                {<br>                    int iPos = this.lV_Info.SelectedItems[0].Index;<br>                    string FileName = this.lV_Info.Items[iPos].SubItems[3].Text.ToString();<br>                    this.axMP_Info.FileName = FileName;<br>                    this.axMP_Info.Play();<br>                }<br>            }<br>            else<br>            {<br>                MessageBox.Show("请选择歌曲！", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);<br>            }<br>        }<br><br>        /// &lt;summary&gt;<br>        /// 暂停播放<br>        /// &lt;/summary&gt;<br>        /// &lt;param name="sender"&gt;&lt;/param&gt;<br>        /// &lt;param name="e"&gt;&lt;/param&gt;<br>        private void btn_Pase_Click(object sender, EventArgs e)<br>        {<br>            if (this.axMP_Info.FileName.Length &gt; 0)<br>                this.axMP_Info.Pause();<br>            else<br>            {<br>                MessageBox.Show("请选择歌曲！", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);<br>            }<br>        }<br><br>        /// &lt;summary&gt;<br>        /// 上一首歌曲<br>        /// &lt;/summary&gt;<br>        /// &lt;param name="sender"&gt;&lt;/param&gt;<br>        /// &lt;param name="e"&gt;&lt;/param&gt;<br>        private void btn_Pre_Click(object sender, EventArgs e)<br>        {<br>            if (this.lV_Info.Items.Count &gt; 0)<br>            {<br>                if (this.lV_Info.SelectedItems.Count &gt; 0)<br>                {<br>                    int iPos = this.lV_Info.SelectedItems[0].Index;<br>                    if (iPos &gt; 0)<br>                    {<br>                        this.lV_Info.Items[iPos - 1].Selected = true;<br>                        string FileName = this.lV_Info.Items[iPos - 1].SubItems[3].Text.ToString();<br>                        this.axMP_Info.FileName = FileName;<br>                        this.axMP_Info.Play();<br>                    }<br>                    else<br>                    {<br>                        MessageBox.Show("已经是第一首歌曲！", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);<br>                    }<br>                }<br>            }<br>            else<br>            {<br>                MessageBox.Show("请选择歌曲！", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);<br>            }<br>        }<br><br>        /// &lt;summary&gt;<br>        /// 下一首歌曲<br>        /// &lt;/summary&gt;<br>        /// &lt;param name="sender"&gt;&lt;/param&gt;<br>        /// &lt;param name="e"&gt;&lt;/param&gt;<br>        private void btn_Next_Click(object sender, EventArgs e)<br>        {<br>            if (this.lV_Info.Items.Count &gt; 0)<br>            {<br>                if (this.lV_Info.SelectedItems.Count &gt; 0)<br>                {<br>                    int iPos = this.lV_Info.SelectedItems[0].Index;<br>                    if (iPos &lt; this.lV_Info.Items.Count - 1)<br>                    {<br>                        this.lV_Info.Items[iPos + 1].Selected = true;<br>                        string FileName = this.lV_Info.Items[iPos + 1].SubItems[3].Text.ToString();<br>                        this.axMP_Info.FileName = FileName;<br>                        this.axMP_Info.Play();<br>                    }<br>                    else<br>                    {<br>                        MessageBox.Show("已经是最后一首歌曲！", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);<br>                    }<br>                }<br>            }<br>            else<br>            {<br>                MessageBox.Show("请选择歌曲！", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);<br>            }<br>        }<br><br>        /// &lt;summary&gt;<br>        /// 停止播放<br>        /// &lt;/summary&gt;<br>        /// &lt;param name="sender"&gt;&lt;/param&gt;<br>        /// &lt;param name="e"&gt;&lt;/param&gt;<br>        private void btn_Stop_Click(object sender, EventArgs e)<br>        {<br>            if (this.axMP_Info.FileName.Length &gt; 0)<br>                this.axMP_Info.Stop();<br>            else<br>            {<br>                MessageBox.Show("请选择歌曲！", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);<br>            }<br>        }<br>    }<br>}</pre>
+<div class="quality-content-view-more mb-15">
+</div><div class="newbest-content-meta line mt-15 ff-arial">
+<div class="ft-info grid">
+<i class="i-quality-icon"></i>
+本回答由<span>电脑网络分类达人 高德宝</span>推荐</div>
+<div class="grid-r f-aid ">
+<ins class="accuse-area" alog-alias="qb-accuse-link-best" style="display: none;"></ins>
+<span alog-action="qb-comment-btnbestbox" class="comment f-black cursor" id="comment-2243092563"><i class="iknow-qb_home_icons i-icon-comment mr-5"></i>评论</span>
+<div class="qb-zan-eva">
+<span alog-action="qb-zan-btnbestbox" class="iknow-qb_home_icons evaluate evaluate-32
+						" id="evaluate-2243092563" data-evaluate="0"><i class="iknow-qb_home_icons i-evaluate"></i><b class="evaluate-tip" style="display:none" id="83-tip">赞</b><b class="evaluate-num evaluate-num-fixed" id="83-num">0</b></span>
+<span alog-action="qb-evaluate-outer" class="iknow-qb_home_icons evaluate evaluate-bad evaluate-32 
+						" id="evaluate-bad-2243092563" data-evaluate="0"><i class="iknow-qb_home_icons i-evaluate"></i><b class="evaluate-tip" style="display:none" id="83-bad-tip">踩</b><b class="evaluate-num evaluate-num-fixed" id="83-bad-num">0</b></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="line wgt-replyer-best wgt-replyer-special-bg ">
+<div class="replyer-best-box">
+<div class="grid mr-15">
+<p class="avatar-70 avatar-static">
+<a alog-action="qb-username" log="pms:newqb,pos:bestreplyer" class="avatar-mavin-a" rel="nofollow" href="http://zhidao.baidu.com/hangjia/profile/%D2%BB%C6%EF%B5%B1%BA%F3?ie=gbk" target="_blank" data-img="http://d.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=a0920f8530d12f2ece50a6647af2f954/4e4a20a4462309f74b2cc340740e0cf3d7cad625.jpg">
+</a>
+</p>
+</div>
+<div class="grid f-aid ff-arial">
+<p class="mb-5">
+<a alog-action="qb-username" log="pms:newqb,pos:bestreplyer" class="mavin-name f-14 mr-10" rel="nofollow" href="http://zhidao.baidu.com/hangjia/profile/%D2%BB%C6%EF%B5%B1%BA%F3?ie=gbk" target="_blank">一骑当后</a>
+<span class="f-orange">
+<i data-title="电脑行业资深行家" data-major="1" class="mavin-reply-icon i-mavin-3"></i>
+<a href="http://help.baidu.com/question?prod_en=zhidao&amp;class=243&amp;id=1536" target="_blank" class="mavin-reply-icon f-orange" data-title="电脑行业资深行家" data-major="1" log="page:question,area:mavin-reply-v">V3</a>
+</span>
+<span class="f-pipe">|</span>
+<span>技术顾问</span>
+</p>
+<p>
+擅长：<span>
+电脑
+</span>
+</p>
+</div>
+</div>
+</div></div>
+<script>
+                    // 高质or满意or特型or推荐答案打点时间
+                    alog && alog('speed.set', 'c_best', +new Date); alog.fire && alog.fire("mark");
+                </script>
+<script>
+                    // 首屏时间打点
+                    void function(e,t){for(var n=t.getElementsByTagName("img"),a=+new Date,i=[],o=function(){this.removeEventListener&&this.removeEventListener("load",o,!1),i.push({img:this,time:+new Date})},s=0;s< n.length;s++)!function(){var e=n[s];e.addEventListener?!e.complete&&e.addEventListener("load",o,!1):e.attachEvent&&e.attachEvent("onreadystatechange",function(){"complete"==e.readyState&&o.call(e,o)})}();alog("speed.set",{fsItems:i,fs:a})}(window,document);
+                </script>
+<div class="wgt-answers mod-shadow has-other " id="wgt-answers">
+<div class="hd line other-hd"><h2>其他回答</h2>
+</div>
+<div class="bd-wrap">
+<script type="text/javascript">
+                    F.context('answers')['493642840'] = {uid:"131475279",imId:"4f2771696c6970696e67363636d607",isBest:"1",id:"493642840",userName:"qiliping666",userNameEnc:"qiliping666",user:{sex:"1",iconType:"6",gradeIndex:"6",grAnswerNum:"76",carefield: [{cid:"78",cname:"体育/运动"},{cid:"86",cname:"硬件"},{cid:"89",cname:"操作系统/系统故障"},{cid:"869",cname:"C#/.NET"},{cid:"146",cname:"人体常识"}],isAuth:"0",authTitle:"",isUserAdmin:"0",userAdminLevel:"",userAdminTitle:"",userAdminType:"",isFamous:"0",isMaster:"0",goodRate:"23",applyExcType:"4"},isAnonymous:"0",isCurrentUser:"0",mapUrl:"",refer:"",replyAskNum:"",threadId:"1974571361",hasComment:"1",qid:"168041777",raid:"",recommendCanceled:"0"};
+                    F.context('answers')['493642840']['c_timestamp'] = '1279507288';
+                                            F.context('relateWords')['answer-content-'+'493642840'] = ["\u6700\u540e\u4e00\u9996\u6b4c"];
+                                                                F.context('user')['highQualityNum'] = '0';
+                                    </script>
+<div class="bd answer answer-first    " id="answer-493642840">
+<div class="line">
+<a id="here" name="here"></a><div class="line content">
+<div id="answer-content-493642840" accuse="aContent" class="answer-text line">
+<span class="con">直接给你个代码吧！using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using System.IO;
+
+namespace MP3File
+{
+    public partial class frmMain : Form
+    {
+        public frmMain()
+        {
+            InitializeComponent();
+        }
+
+        /// &lt;summary&gt;
+        /// 浏览MP3文件
+        /// &lt;/summary&gt;
+        /// &lt;param name="sender"&gt;&lt;/param&gt;
+        /// &lt;param name="e"&gt;&lt;/param&gt;
+        private void btn_Open_Click(object sender, EventArgs e)
+        {
+            if (this.oFDlog_Info.ShowDialog() == DialogResult.OK)
+            {
+                this.lV_Info.Items.Clear();
+                string[] FileNames = this.oFDlog_Info.FileNames;
+                foreach (string FileName in FileNames)
+                {
+                    //取得文件大小
+                    FileInfo FileInfo = new FileInfo(FileName);
+                    float FileSize =...</span>
+<span class="con-all" style="display:none;">直接给你个代码吧！using System;<br>using System.Collections.Generic;<br>using System.ComponentModel;<br>using System.Data;<br>using System.Drawing;<br>using System.Text;<br>using System.Windows.Forms;<br>using System.IO;<br><br>namespace MP3File<br>{<br>    public partial class frmMain : Form<br>    {<br>        public frmMain()<br>        {<br>            InitializeComponent();<br>        }<br><br>        /// &lt;summary&gt;<br>        /// 浏览MP3文件<br>        /// &lt;/summary&gt;<br>        /// &lt;param name="sender"&gt;&lt;/param&gt;<br>        /// &lt;param name="e"&gt;&lt;/param&gt;<br>        private void btn_Open_Click(object sender, EventArgs e)<br>        {<br>            if (this.oFDlog_Info.ShowDialog() == DialogResult.OK)<br>            {<br>                this.lV_Info.Items.Clear();<br>                string[] FileNames = this.oFDlog_Info.FileNames;<br>                foreach (string FileName in FileNames)<br>                {<br>                    //取得文件大小<br>                    FileInfo FileInfo = new FileInfo(FileName);<br>                    float FileSize = (float)FileInfo.Length / (1024 * 1024);<br>                    this.axMP_Info.FileName = FileName;<br>                    //取得作者信息<br>                    string Author = this.axMP_Info.GetMediaInfoString(MediaPlayer.MPMediaInfoType.mpClipAuthor);<br>                    //取得不含路径的文件名<br>                    string ShortFileName = FileName.Substring(FileName.LastIndexOf("\\") + 1);<br>                    ShortFileName = ShortFileName.Substring(0, ShortFileName.Length - 4);<br>                    //填充歌曲列表 <br>                    string[] SubItem ={ ShortFileName, Author, FileSize.ToString().Substring(0, 4) + "M", FileName };<br>                    ListViewItem Item = new ListViewItem(SubItem);<br>                    this.lV_Info.Items.Add(Item);<br>                    this.lV_Info.Items[0].Selected = true;<br>                }<br>            }<br>        }<br><br>        /// &lt;summary&gt;<br>        /// 播放MP3文件<br>        /// &lt;/summary&gt;<br>        /// &lt;param name="sender"&gt;&lt;/param&gt;<br>        /// &lt;param name="e"&gt;&lt;/param&gt;<br>        private void btn_Play_Click(object sender, EventArgs e)<br>        {<br>            if (this.lV_Info.Items.Count &gt; 0)<br>            {<br>                if (this.lV_Info.SelectedItems.Count &gt; 0)<br>                {<br>                    int iPos = this.lV_Info.SelectedItems[0].Index;<br>                    string FileName = this.lV_Info.Items[iPos].SubItems[3].Text.ToString();<br>                    this.axMP_Info.FileName = FileName;<br>                    this.axMP_Info.Play();<br>                }<br>            }<br>            else<br>            {<br>                MessageBox.Show("请选择歌曲！", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);<br>            }<br>        }<br><br>        /// &lt;summary&gt;<br>        /// 暂停播放<br>        /// &lt;/summary&gt;<br>        /// &lt;param name="sender"&gt;&lt;/param&gt;<br>        /// &lt;param name="e"&gt;&lt;/param&gt;<br>        private void btn_Pase_Click(object sender, EventArgs e)<br>        {<br>            if (this.axMP_Info.FileName.Length &gt; 0)<br>                this.axMP_Info.Pause();<br>            else<br>            {<br>                MessageBox.Show("请选择歌曲！", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);<br>            }<br>        }<br><br>        /// &lt;summary&gt;<br>        /// 上一首歌曲<br>        /// &lt;/summary&gt;<br>        /// &lt;param name="sender"&gt;&lt;/param&gt;<br>        /// &lt;param name="e"&gt;&lt;/param&gt;<br>        private void btn_Pre_Click(object sender, EventArgs e)<br>        {<br>            if (this.lV_Info.Items.Count &gt; 0)<br>            {<br>                if (this.lV_Info.SelectedItems.Count &gt; 0)<br>                {<br>                    int iPos = this.lV_Info.SelectedItems[0].Index;<br>                    if (iPos &gt; 0)<br>                    {<br>                        this.lV_Info.Items[iPos - 1].Selected = true;<br>                        string FileName = this.lV_Info.Items[iPos - 1].SubItems[3].Text.ToString();<br>                        this.axMP_Info.FileName = FileName;<br>                        this.axMP_Info.Play();<br>                    }<br>                    else<br>                    {<br>                        MessageBox.Show("已经是第一首歌曲！", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);<br>                    }<br>                }<br>            }<br>            else<br>            {<br>                MessageBox.Show("请选择歌曲！", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);<br>            }<br>        }<br><br>        /// &lt;summary&gt;<br>        /// 下一首歌曲<br>        /// &lt;/summary&gt;<br>        /// &lt;param name="sender"&gt;&lt;/param&gt;<br>        /// &lt;param name="e"&gt;&lt;/param&gt;<br>        private void btn_Next_Click(object sender, EventArgs e)<br>        {<br>            if (this.lV_Info.Items.Count &gt; 0)<br>            {<br>                if (this.lV_Info.SelectedItems.Count &gt; 0)<br>                {<br>                    int iPos = this.lV_Info.SelectedItems[0].Index;<br>                    if (iPos &lt; this.lV_Info.Items.Count - 1)<br>                    {<br>                        this.lV_Info.Items[iPos + 1].Selected = true;<br>                        string FileName = this.lV_Info.Items[iPos + 1].SubItems[3].Text.ToString();<br>                        this.axMP_Info.FileName = FileName;<br>                        this.axMP_Info.Play();<br>                    }<br>                    else<br>                    {<br>                        MessageBox.Show("已经是最后一首歌曲！", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);<br>                    }<br>                }<br>            }<br>            else<br>            {<br>                MessageBox.Show("请选择歌曲！", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);<br>            }<br>        }<br><br>        /// &lt;summary&gt;<br>        /// 停止播放<br>        /// &lt;/summary&gt;<br>        /// &lt;param name="sender"&gt;&lt;/param&gt;<br>        /// &lt;param name="e"&gt;&lt;/param&gt;<br>        private void btn_Stop_Click(object sender, EventArgs e)<br>        {<br>            if (this.axMP_Info.FileName.Length &gt; 0)<br>                this.axMP_Info.Stop();<br>            else<br>            {<br>                MessageBox.Show("请选择歌曲！", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);<br>            }<br>        }<br>    }<br>}<br><br>详细情况 可以留言！</span>
+<a href="javascript://" class="expend" rel="nofollow">展开<i class="i-incline-down"></i></a>
+</div>
+<div class="line f-light-gray f-12 mt-10 ff-arial">
+<i class="i-quality-icon"></i>
+本回答被提问者采纳</div>
+<div class="line info f-light-gray mt-10 mb-5 f-12">
+<div class="grid pt-5">
+<a alog-action="qb-username" class="user-name" rel="nofollow" href="http://www.baidu.com/p/qiliping666?from=zhidao" target="_blank">
+qiliping666
+</a>
+<span class="i-gradeIndex i-gradeIndex-6"></span>
+<span class="f-pipe">|</span>
+<span class="pos-time">2010-07-19 10:41</span>
+</div>
+<div class="grid-r f-aid pos-relative">
+<ins class="accuse-area" alog-action="qb-accuse-link" style="display: none;"></ins>
+<span alog-action="qb-comment-btn" class="comment f-black cursor" id="comment-493642840"><i class="iknow-qb_home_icons i-icon-comment mr-5"></i>评论(<em>6</em>)</span>
+<div class="qb-zan-eva">
+<span alog-action="qb-zan-btn" class="iknow-qb_home_icons evaluate evaluate-32
+						" id="evaluate-493642840" data-evaluate="20"><i class="iknow-qb_home_icons i-evaluate"></i><b class="evaluate-tip" style="display:none" id="110-tip">赞</b><b class="evaluate-num evaluate-num-fixed" id="110-num">20</b></span>
+<span alog-action="qb-evaluate-outer" class="iknow-qb_home_icons evaluate evaluate-bad evaluate-32 
+						" id="evaluate-bad-493642840" data-evaluate="0"><i class="iknow-qb_home_icons i-evaluate"></i><b class="evaluate-tip" style="display:none" id="110-bad-tip">踩</b><b class="evaluate-num evaluate-num-fixed" id="110-bad-num">0</b></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+                    F.context('answers')['1163247764'] = {uid:"546818021",imId:"e5c7b9c5d4c2cfc23233349720",id:"1163247764",userName:"古月下234",userNameEnc:"%B9%C5%D4%C2%CF%C2234",user:{sex:"2",iconType:"6",gradeIndex:"2",grAnswerNum:"1",isAuth:"0",authTitle:"",isUserAdmin:"0",userAdminLevel:"",userAdminTitle:"",userAdminType:"",isFamous:"0",isMaster:"0",goodRate:"33"},isAnonymous:"0",isCurrentUser:"0",mapUrl:"",refer:"",replyAskNum:"",threadId:"4652991057",hasComment:"0",qid:"168041777",raid:"",recommendCanceled:"0"};
+                    F.context('answers')['1163247764']['c_timestamp'] = '1345466848';
+                                                                F.context('user')['highQualityNum'] = '0';
+                                    </script>
+<div class="bd answer  answer-last   " id="answer-1163247764">
+<div class="line">
+<a id="here" name="here"></a><div class="line content">
+<div id="answer-content-1163247764" accuse="aContent" class="answer-text line">
+<span class="con">用windowmediaplayer控件 <br><br> wmp控件是Active-X控件   默认在工具栏是不显示的<br>工具栏右键菜单   点击【选择列】     在弹出的选择窗口中点击【<a href="https://www.baidu.com/s?wd=COM%E7%BB%84%E4%BB%B6&amp;tn=44039180_cpr&amp;fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1Y3uWnsmWw-nj6LuhD3PA790ZwV5Hcvrjm3rH6sPfKWUMw85HfYnjn4nH6sgvPsT6KdThsqpZwYTjCEQLGCpyw9Uz4Bmy-bIi4WUvYETgN-TLwGUv3EnHm3njfkP1TL" target="_blank" class="baidu-highlight" rel="nofollow">COM组件</a>】  选择卡    里面你可以找到window media player控件的</span>
+</div>
+<div class="line info f-light-gray mt-10 mb-5 f-12">
+<div class="grid pt-5">
+<a alog-action="qb-username" class="user-name" rel="nofollow" href="http://www.baidu.com/p/%E5%8F%A4%E6%9C%88%E4%B8%8B234?from=zhidao" target="_blank">
+古月下234
+</a>
+<span class="i-gradeIndex i-gradeIndex-2"></span>
+<span class="f-pipe">|</span>
+<span class="pos-time">2012-08-20 20:47</span>
+</div>
+<div class="grid-r f-aid pos-relative">
+<ins class="accuse-area" alog-action="qb-accuse-link" style="display: none;"></ins>
+<span alog-action="qb-comment-btn" class="comment f-black cursor" id="comment-1163247764"><i class="iknow-qb_home_icons i-icon-comment mr-5"></i>评论</span>
+<div class="qb-zan-eva">
+<span alog-action="qb-zan-btn" class="iknow-qb_home_icons evaluate evaluate-32
+						" id="evaluate-1163247764" data-evaluate="0"><i class="iknow-qb_home_icons i-evaluate"></i><b class="evaluate-tip" style="display:none" id="126-tip">赞</b><b class="evaluate-num evaluate-num-fixed" id="126-num">0</b></span>
+<span alog-action="qb-evaluate-outer" class="iknow-qb_home_icons evaluate evaluate-bad evaluate-32 
+						" id="evaluate-bad-1163247764" data-evaluate="0"><i class="iknow-qb_home_icons i-evaluate"></i><b class="evaluate-tip" style="display:none" id="126-bad-tip">踩</b><b class="evaluate-num evaluate-num-fixed" id="126-bad-num">0</b></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="wgt-bottom-union mod-shadow line">
+<h2><i class="iknow-qb_home_icons"></i>为您推荐：</h2>
+<iframe src="./C# 音乐播放器怎么弄_百度知道_files/home.html" width="450" height="25" scrolling="no" frameborder="0" style="width: 450px; height: 25px; background-color: transparent;"></iframe><script id="BDEMBED_PSIDu2115503">
+    var cpro_psid = "u2115503";
+    var cpro_pswidth = "450";
+    var cpro_psheight = "25";
+    var cpro_psdata = {
+        titff: '"Microsoft YaHei"',
+        titfs: '14',
+        rss2: "#333",
+        rss3:'#34b458'
+    }
+    </script>
+<script type="text/javascript">
+        // 广告拦截打点
+        F.context('ads_log_bottomrequest', 1);
+        // 广告同步加载
+        if (typeof BAIDU_SS_HHRUN!='function'){with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://su.bdimg.com/static/dspui/js/ue.js?v='+~(-new Date()/5600e5)]}else {BAIDU_SS_HHRUN()}
+    </script>
+</div>
+<div class="wgt-related mt-5 mod-shadow" id="wgt-related">
+<h2><i class="iknow-qb_home_icons"></i>其他类似问题</h2>
+<div class="related-list line">
+<ul class="list-34 related-ul" alog-group="qb-relative-que">
+<li>
+<span class="grid-r f-aid ff-arial">2014-06-30</span>
+<a href="http://zhidao.baidu.com/question/2010262926901034828.html?qbl=relate_question_0" target="_blank" log="fr:qrl,pms:newqb,page:qb-new,pos:relative_title,index:1,cid:91" class="related-link" data-qid="2010262926901034828">如何使用C#winForm做音乐播放器拜托了各位 谢谢<em class="praise-num ml-5" title="所有回答获得3个赞同">
+<i class="iknow-qb_home_icons i-evaluate"></i><span class="ml-5 ff-arial">3</span>
+</em>
+</a>
+</li>
+<li>
+<span class="grid-r f-aid ff-arial">2014-10-18</span>
+<a href="http://zhidao.baidu.com/question/1382737483418306980.html?qbl=relate_question_1" target="_blank" log="fr:qrl,pms:newqb,page:qb-new,pos:relative_title,index:2,cid:91" class="related-link" data-qid="1382737483418306980">c#音乐播放器的思路是什么？主要是它怎么获取mp3文件并播放...<em class="praise-num ml-5" title="所有回答获得1个赞同">
+<i class="iknow-qb_home_icons i-evaluate"></i><span class="ml-5 ff-arial">1</span>
+</em>
+</a>
+</li>
+<li>
+<span class="grid-r f-aid ff-arial">2013-12-16</span>
+<a href="http://zhidao.baidu.com/question/1381925495933040980.html?qbl=relate_question_2" target="_blank" log="fr:qrl,pms:newqb,page:qb-new,pos:relative_title,index:3,cid:91" class="related-link" data-qid="1381925495933040980">新浪博客里的音乐播放器怎么弄的</a>
+</li>
+<li>
+<span class="grid-r f-aid ff-arial">2012-11-23</span>
+<a href="http://zhidao.baidu.com/question/495353413.html?qbl=relate_question_3" target="_blank" log="fr:qrl,pms:newqb,page:qb-new,pos:relative_title,index:4,cid:91" class="related-link" data-qid="495353413">C# 音乐播放器怎么添加歌词<em class="praise-num ml-5" title="所有回答获得1个赞同">
+<i class="iknow-qb_home_icons i-evaluate"></i><span class="ml-5 ff-arial">1</span>
+</em>
+</a>
+</li>
+<li>
+<span class="grid-r f-aid ff-arial">2013-12-28</span>
+<a href="http://zhidao.baidu.com/question/1603694643571539587.html?qbl=relate_question_4" target="_blank" log="fr:qrl,pms:newqb,page:qb-new,pos:relative_title,index:5,cid:91" class="related-link" data-qid="1603694643571539587">怎么把音乐播放器里的音乐弄到桌面？<em class="praise-num ml-5" title="所有回答获得3个赞同">
+<i class="iknow-qb_home_icons i-evaluate"></i><span class="ml-5 ff-arial">3</span>
+</em>
+</a>
+</li>
+</ul>
+</div>
+<div class="related-more clearfix">
+<a log="fr:qrl,pms:newqb,pos:relative_more" alog-action="qb-relative-more" target="_blank" rel="nofollow" href="http://zhidao.baidu.com/search?word=C#   音乐播放器怎么弄&amp;ie=gbk&amp;fr=qrl&amp;cid=91&amp;qbl=relate_question_more" class="line f-14 mt-5">
+更多类似问题<span class="ff-arial">&nbsp;&gt;</span>
+</a>
+</div>
+</div>
+<div class="wgt-topic mod-shadow" id="wgt-topic">
+<h2><i class="iknow-qb_home_icons"></i><em>音乐播放器</em>的相关知识</h2>
+<ul class="topic-list list-34" alog-group="qb-relative-title">
+<li>
+<span class="grid-r f-aid ff-arial">2011-03-27</span>
+<a href="http://zhidao.baidu.com/question/238166017.html?fr=qrl&amp;index=0&amp;qbl=topic_question_0" log="pos:exttitle,topic:1,index:1" target="_blank" data-qid="238166017">
+哪一款手机音乐播放器好用
+<i class="iknow-qb_home_icons i-evaluate ml-5"></i><span class="ml-5 f-red f-12 ff-arial" title="回答获得254个赞同">254</span>
+</a>
+</li>
+<li>
+<span class="grid-r f-aid ff-arial">2011-02-17</span>
+<a href="http://zhidao.baidu.com/question/224725450.html?fr=qrl&amp;index=1&amp;qbl=topic_question_1" log="pos:exttitle,topic:1,index:2" target="_blank" data-qid="224725450">
+QQ音乐播放器下载歌曲
+<i class="iknow-qb_home_icons i-evaluate ml-5"></i><span class="ml-5 f-red f-12 ff-arial" title="回答获得10个赞同">10</span>
+</a>
+</li>
+<li>
+<span class="grid-r f-aid ff-arial">2010-01-17</span>
+<a href="http://zhidao.baidu.com/question/131480591.html?fr=qrl&amp;index=2&amp;qbl=topic_question_2" log="pos:exttitle,topic:1,index:3" target="_blank" data-qid="131480591">
+那种音乐播放器可以多倍加速播放？
+<i class="iknow-qb_home_icons i-evaluate ml-5"></i><span class="ml-5 f-red f-12 ff-arial" title="回答获得58个赞同">58</span>
+</a>
+</li>
+<li>
+<span class="grid-r f-aid ff-arial">2008-04-16</span>
+<a href="http://zhidao.baidu.com/question/49521011.html?fr=qrl&amp;index=3&amp;qbl=topic_question_3" log="pos:exttitle,topic:1,index:4" target="_blank" data-qid="49521011">
+手机音乐播放器出现乱码
+<i class="iknow-qb_home_icons i-evaluate ml-5"></i><span class="ml-5 f-red f-12 ff-arial" title="回答获得5个赞同">5</span>
+</a>
+</li>
+<li>
+<span class="grid-r f-aid ff-arial">2011-02-14</span>
+<a href="http://zhidao.baidu.com/question/222103683.html?fr=qrl&amp;index=4&amp;qbl=topic_question_4" log="pos:exttitle,topic:1,index:5" target="_blank" data-qid="222103683">
+OPPO手机音乐播放器
+<i class="iknow-qb_home_icons i-evaluate ml-5"></i><span class="ml-5 f-red f-12 ff-arial" title="回答获得63个赞同">63</span>
+</a>
+</li>
+</ul>
+<div class="topic-more clearfix">
+<a log="pos:extmore,topic:1" class="mt-5" alog-alias="qb-relgrup-more" target="_blank" rel="nofollow" href="http://zhidao.baidu.com/search?word=%D2%F4%C0%D6%B2%A5%B7%C5%C6%F7&amp;ie=gbk&amp;fr=qrl&amp;cid=91&amp;qbl=topic_question_more">
+更多关于<em>音乐播放器</em>的知识<span class="ff-arial">&nbsp;&gt;</span>
+</a>
+</div>
+</div>
+<div class="wgt-relate-search mod-shadow line">
+<h2><i class="iknow-qb_home_icons"></i>网友都在找：</h2>
+<a href="http://zhidao.baidu.com/search?word=c%20%B2%A5%B7%C5%D2%F4%C0%D6&amp;qbl=related_search_0&amp;fr=qb_relate_search_exp&amp;ie=gbk" target="_blank" rel="nofollow" log="page:qb-new,pos:related_search,action:click">c 播放音乐</a>
+</div>
+<div class="wgt-push mod-shadow last ">
+<h2 class="hd line"><i class="iknow-qb_home_icons"></i>等待您来回答</h2>
+<ul alog-group="qb-push-que" class="bd list-34 line push-ul">
+<li>
+<span class="grid-r f-aid ff-arial">2回答</span>
+<a class="media-980" log="pms:newqb,pos:pushlist,page:qb-new" href="http://zhidao.baidu.com/question/556365293654167532.html?push=ql&amp;group=0&amp;qbl=push_question_0&amp;rpRecommand=c&amp;entry=qb_qb_view" target="_blank">谁有韩剧doctors百度云，谢谢</a>
+</li>
+<li>
+<span class="grid-r f-aid ff-arial">2回答</span>
+<a class="media-980" log="pms:newqb,pos:pushlist,page:qb-new" href="http://zhidao.baidu.com/question/1114323226468854539.html?push=ql&amp;group=0&amp;qbl=push_question_1&amp;rpRecommand=c&amp;entry=qb_qb_view" target="_blank">我现在初二，每天写作业都写到很晚，没有时间出去锻炼，有什...</a>
+</li>
+<li>
+<span class="grid-r f-aid ff-arial">2回答</span>
+<a class="media-980" log="pms:newqb,pos:pushlist,page:qb-new" href="http://zhidao.baidu.com/question/1114323163044075339.html?push=ql&amp;group=0&amp;qbl=push_question_2&amp;rpRecommand=c&amp;entry=qb_qb_view" target="_blank">我等了一个女孩三年了连人声音都没有看到 照片也没有 我是有...</a>
+</li>
+<li>
+<span class="grid-r f-aid ff-arial">10回答</span>
+<a class="media-980" log="pms:newqb,pos:pushlist,page:qb-new" href="http://zhidao.baidu.com/question/371863981956716084.html?push=ql&amp;group=0&amp;qbl=push_question_3&amp;rpRecommand=c&amp;entry=qb_qb_view" target="_blank">一个身高180的女孩追我，而且长得漂亮，但是太高了，而且我才...</a>
+<i class="iknow-qb_home_icons i-new-wealth"></i>
+<span class="f-red mr-5 f-12">5</span>
+</li>
+<li>
+<span class="grid-r f-aid ff-arial">4回答</span>
+<a class="media-980" log="pms:newqb,pos:pushlist,page:qb-new" href="http://zhidao.baidu.com/question/1736104055967449387.html?push=ql&amp;group=0&amp;qbl=push_question_4&amp;rpRecommand=c&amp;entry=qb_qb_view" target="_blank">我的额头纹怎么都去除不了，应该怎么去除？</a>
+</li>
+<li>
+<span class="grid-r f-aid ff-arial">2回答</span>
+<a class="media-980" log="pms:newqb,pos:pushlist,page:qb-new" href="http://zhidao.baidu.com/question/1736104055902814267.html?push=ql&amp;group=0&amp;qbl=push_question_5&amp;rpRecommand=c&amp;entry=qb_qb_view" target="_blank">我想给一个女生送礼物，这种礼物好不好？</a>
+<i class="iknow-qb_home_icons i-new-wealth"></i>
+<span class="f-red mr-5 f-12">10</span>
+</li>
+<li>
+<span class="grid-r f-aid ff-arial">4回答</span>
+<a class="media-980" log="pms:newqb,pos:pushlist,page:qb-new" href="http://zhidao.baidu.com/question/556365229841129532.html?push=ql&amp;group=0&amp;qbl=push_question_6&amp;rpRecommand=c&amp;entry=qb_qb_view" target="_blank">初中女生，明天下午和小学同学回母校看语文老师，送点什么礼...</a>
+<i class="iknow-qb_home_icons i-new-wealth"></i>
+<span class="f-red mr-5 f-12">5</span>
+</li>
+<li>
+<span class="grid-r f-aid ff-arial">2回答</span>
+<a class="media-980" log="pms:newqb,pos:pushlist,page:qb-new" href="http://zhidao.baidu.com/question/371863981698259284.html?push=ql&amp;group=0&amp;qbl=push_question_7&amp;rpRecommand=c&amp;entry=qb_qb_view" target="_blank">古( )观( )</a>
+</li>
+<li>
+<span class="grid-r f-aid ff-arial">2回答</span>
+<a class="media-980" log="pms:newqb,pos:pushlist,page:qb-new" href="http://zhidao.baidu.com/question/330875766651991725.html?push=ql&amp;group=0&amp;qbl=push_question_8&amp;rpRecommand=c&amp;entry=qb_qb_view" target="_blank">淘宝退货，图第三条怎么旺旺留言？</a>
+</li>
+<li>
+<span class="grid-r f-aid ff-arial">2回答</span>
+<a class="media-980" log="pms:newqb,pos:pushlist,page:qb-new" href="http://zhidao.baidu.com/question/1578081104548383220.html?push=ql&amp;group=0&amp;qbl=push_question_9&amp;rpRecommand=c&amp;entry=qb_qb_view" target="_blank">沈莎，陆佳琪，朱晓群，丁馨哪个好听？女名</a>
+</li>
+<li>
+<span class="grid-r f-aid ff-arial">4回答</span>
+<a class="media-980" log="pms:newqb,pos:pushlist,page:qb-new" href="http://zhidao.baidu.com/question/1114323162720041699.html?push=ql&amp;group=0&amp;qbl=push_question_10&amp;rpRecommand=c&amp;entry=qb_qb_view" target="_blank">这女的直播时为什么总喜欢露出自己脚丫？</a>
+</li>
+<li>
+<span class="grid-r f-aid ff-arial">2回答</span>
+<a class="media-980" log="pms:newqb,pos:pushlist,page:qb-new" href="http://zhidao.baidu.com/question/1114323162655406019.html?push=ql&amp;group=0&amp;qbl=push_question_11&amp;rpRecommand=c&amp;entry=qb_qb_view" target="_blank">要个qq等级高的</a>
+</li>
+<li>
+<span class="grid-r f-aid ff-arial">2回答</span>
+<a class="media-980" log="pms:newqb,pos:pushlist,page:qb-new" href="http://zhidao.baidu.com/question/1114323162590975739.html?push=ql&amp;group=0&amp;qbl=push_question_12&amp;rpRecommand=c&amp;entry=qb_qb_view" target="_blank">0.25×0.12×9简便运算，帮帮忙</a>
+</li>
+<li>
+<span class="grid-r f-aid ff-arial">2回答</span>
+<a class="media-980" log="pms:newqb,pos:pushlist,page:qb-new" href="http://zhidao.baidu.com/question/1578081104354437220.html?push=ql&amp;group=0&amp;qbl=push_question_13&amp;rpRecommand=c&amp;entry=qb_qb_view" target="_blank">一个300多人单位的局长，和小他十多岁的一个女下属说业务时总...</a>
+</li>
+<li>
+<span class="grid-r f-aid ff-arial">2回答</span>
+<a class="media-980" log="pms:newqb,pos:pushlist,page:qb-new" href="http://zhidao.baidu.com/question/1114323162461890579.html?push=ql&amp;group=0&amp;qbl=push_question_14&amp;rpRecommand=c&amp;entry=qb_qb_view" target="_blank">求第三大题，3，4小题的解谢谢，帮忙必采纳</a>
+</li>
+</ul>
+<div class="ft line more-push clearfix">
+<a alog-action="qb-push-more" log="pms:newqb,pos:pushlist,page:question" target="_blank" href="http://zhidao.baidu.com/browse/?lm=8&amp;push=ql&amp;qbl=push_question_more">更多等待您来回答的问题<span class="ff-arial">&nbsp;&gt;</span></a>
+</div>
+</div>
+</article>
+<aside class="grid-r qb-side" id="qb-side">
+<div></div>
+<div class="wgt-user mod-shadow mb-5" id="wgt-user">
+<div class="line user-info">
+<div id="user-avarta" class="avarta grid mr-10 avatar-mask-p">
+<a alog-action="qb-enter-uc" href="http://zhidao.baidu.com/ihome/" target="_blank"><img class="user-head-img" width="50" height="50" src="./C# 音乐播放器怎么弄_百度知道_files/r6s1g1.gif"></a>
+<div class="goto-set-avatar"><a href="http://zhidao.baidu.com/ihome/set/profile?type=avatar" target="_blank">更换形象</a><p></p></div></div>
+<div class="info grid f-12">
+<p class="line">
+<a href="http://zhidao.baidu.com/ihome" target="_blank" class="user-name">梦小阴</a>
+</p>
+<p">
+                            <a class="f-aid iknow-qb_grade_icons i-gradeIndex-1" title="采纳率：0%" target="_blank" href="http://help.baidu.com/question?prod_en=zhidao&amp;class=242&amp;id=1000776"></a>
+                    <p></p>
+                    <a href="http://zhidao.baidu.com/link?url=Mib8mAsoyh_rjPwxlW4RY7etdg6JRaOPTMuKZeFztc6Oo_CJJuzWJRGVAyAhSFX3lLYbdYY4pvXLR66HyMmogK#" class="grid-l go-sign-in" data-log="type:2060,action:click,area:sign-in-area,page:qb">签到</a>
+            </p"></div>
+</div>
+<div class="qbside-top-line"></div>
+</div>
+<div class="wgt-daily mod-shadow">
+<div class="daily-line mb-10 pt-10">
+<h3 class="grid">知道日报</h3>
+<span class="grid"></span>
+<a href="http://zhidao.baidu.com/daily/square/" target="_blank" alog-action="qb-daily-review" class="grid-r f-aid f-yahei">全部文章</a>
+</div>
+<div id="daily-carousel" class="carousel"><div class="carousel-inner"><div class="item" index="0" style="width: 100%; top: 0px; left: -100%;"><a href="http://zhidao.baidu.com/daily/view?id=22509" alog-action="qb-daily-img" target="_blank"><img src="./C# 音乐播放器怎么弄_百度知道_files/timg" border="0" width="250"></a></div><div class="item" index="1" style="width: 100%; top: 0px; left: -100%;"><a href="http://zhidao.baidu.com/daily/view?id=22620" alog-action="qb-daily-img" target="_blank" data-img="http://mt1.baidu.com/timg?wh_rate=0&amp;wapiknow&amp;quality=100&amp;size=w250&amp;sec=0&amp;di=ff7d3911264aa6527cdff426dd14598d&amp;src=http%3A%2F%2Fiknow02.bosstatic.bdimg.com%2Fzhidaoribao%2F2016%2F0908%2Fzp.jpg"><img src="./C# 音乐播放器怎么弄_百度知道_files/timg(1)" border="0" width="250"></a></div><div class="item" index="2" style="width: 100%; top: 0px; left: -100%;"><a href="http://zhidao.baidu.com/daily/view?id=22575" alog-action="qb-daily-img" target="_blank" data-img="http://mt1.baidu.com/timg?wh_rate=0&amp;wapiknow&amp;quality=100&amp;size=w250&amp;sec=0&amp;di=c28d9163e0c5cb4662ec58b57509592b&amp;src=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fwh%253D800%252C450%2Fsign%3Df1dd8fb719dfa9ecfd7b5e1f52e0db37%2F962bd40735fae6cd788746ca07b30f2442a70f6d.jpg"><img src="./C# 音乐播放器怎么弄_百度知道_files/timg(2)" border="0" width="250"></a></div><div class="item active" index="3" style="width: 100%; top: 0px; left: 0%;"><a href="http://zhidao.baidu.com/daily/view?id=22642" alog-action="qb-daily-img" target="_blank" data-img="http://mt1.baidu.com/timg?wh_rate=0&amp;wapiknow&amp;quality=100&amp;size=w250&amp;sec=0&amp;di=85db0980d0ea5dafd0d35a08909d3e87&amp;src=http%3A%2F%2Fiknow02.bosstatic.bdimg.com%2Fzhidaoribao%2F2016%2F0908%2Fyq.jpg"><img src="http://mt1.baidu.com/timg?wh_rate=0&amp;wapiknow&amp;quality=100&amp;size=w250&amp;sec=0&amp;di=85db0980d0ea5dafd0d35a08909d3e87&amp;src=http%3A%2F%2Fiknow02.bosstatic.bdimg.com%2Fzhidaoribao%2F2016%2F0908%2Fyq.jpg" border="0" width="250"></a></div><div class="item" index="4" style="width: 100%; top: 0px;"><a href="http://zhidao.baidu.com/daily/view?id=22363" alog-action="qb-daily-img" target="_blank" data-img="http://mt1.baidu.com/timg?wh_rate=0&amp;wapiknow&amp;quality=100&amp;size=w250&amp;sec=0&amp;di=5a689c74415a683b1f1e3e230ab7b391&amp;src=http%3A%2F%2Fiknow02.bosstatic.bdimg.com%2Fzhidaoribao%2F2016%2F0908%2Ffg.jpg"></a></div><div class="item" index="5" style="width: 100%; top: 0px;"><a href="http://zhidao.baidu.com/daily/view?id=22595" alog-action="qb-daily-img" target="_blank" data-img="http://mt1.baidu.com/timg?wh_rate=0&amp;wapiknow&amp;quality=100&amp;size=w250&amp;sec=0&amp;di=b6f9a90365ebd75aed98f81a0507a01b&amp;src=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fwh%253D800%252C450%2Fsign%3D93291ba12e9759ee4a0568c382cb6f22%2Fc995d143ad4bd113e823c89e52afa40f4afb05ab.jpg"></a></div><div class="item" index="6" style="width: 100%; top: 0px;"><a href="http://zhidao.baidu.com/daily/view?id=22532" alog-action="qb-daily-img" target="_blank" data-img="http://mt1.baidu.com/timg?wh_rate=0&amp;wapiknow&amp;quality=100&amp;size=w250&amp;sec=0&amp;di=7e8272f9f06e404fe7465c967e2beef6&amp;src=http%3A%2F%2Fc.hiphotos.baidu.com%2Fzhidao%2Fwh%253D800%252C450%2Fsign%3D55a1b845bc8f8c54e386cd270a1901c1%2F8644ebf81a4c510f23099cb16859252dd52aa548.jpg"></a></div><div class="item" index="7" style="width: 100%; top: 0px;"><span style="position: absolute;left: 36px;top: 11px;color: #FFF;font-size: 15px;">1106</span><a href="http://zhidao.baidu.com/daily" alog-action="qb-daily-img" target="_blank" data-img="http://iknowpc.bdimg.com/static/question/widget/sample/user/info/daily/img/daily_75f4c4f.png"></a></div></div><div class="carousel-misc"><a class="carousel-control carousel-control-left"></a><a class="carousel-control carousel-control-right"></a></div></div>
+<div class="wgt-daily-wall"><em>脑洞向：怎样在月球上建一栋高楼...</em><s></s></div>
+</div>
+<div class="qbside-top-line"></div>
+<div class="widget-new-graphic">
+<style>.ec-ad {margin-left: -10px;padding-top: 5px;padding-bottom: 12px;}.ec-ad .ec-row-title .ec-title {font: normal 14px/34px 'Microsoft YaHei';padding-left: 10px;color: #666;}.ec-ad .ec-img-list {font-size: 0;}.ec-ad .ec-img-list .ec-img-item {width: 83px;display: inline-block;font-size: 12px;margin-left: 10px;vertical-align: top;}.ec-ad .ec-img {vertical-align: top;}.ec-ad .ec-img-desc {margin-top: 7px;text-align: center;color: #2d64b3;display: block;font-size: 12px;line-height: 18px;}</style><div class="ec-ad"><div class="ec-row-title"><h3 class="ec-title">相关搜索</h3></div><div class="ec-row-desc"><div class="ec-img-list"><a href="https://www.baidu.com/s?wd=%B7%DB%B4%CC%CA%C7%D4%F5%D1%F9%D0%CE%B3%C9%B5%C4&amp;tn=SE_pczhidaotuwenqb_zdqb2016&amp;lqsource=-1&amp;dmaseid=dmaseid0" class="ec-img-item" target="_blank"><img src="./C# 音乐播放器怎么弄_百度知道_files/u=2442103424,1742213071&amp;fm=203" class="ec-img" width="83" height="83" alt=""><span class="ec-img-desc">粉刺是怎样形成的</span></a><a href="https://www.baidu.com/s?wd=%C0%D6%CD%E6%D3%CE%CF%B7&amp;tn=SE_pczhidaotuwenqb_zdqb2016&amp;lqsource=-1&amp;dmaseid=dmaseid0" class="ec-img-item" target="_blank"><img src="./C# 音乐播放器怎么弄_百度知道_files/u=4099151968,2571323722&amp;fm=203" class="ec-img" width="83" height="83" alt=""><span class="ec-img-desc">乐玩游戏</span></a><a href="https://www.baidu.com/s?wd=%CE%EF%C0%ED%CA%B5%D1%E9%CA%D2%C9%E8%BC%C6&amp;tn=SE_pczhidaotuwenqb_zdqb2016&amp;lqsource=-1&amp;dmaseid=dmaseid0" class="ec-img-item" target="_blank"><img src="./C# 音乐播放器怎么弄_百度知道_files/u=3724112371,4097866783&amp;fm=207" class="ec-img" width="83" height="83" alt=""><span class="ec-img-desc">物理实验室设计</span></a></div></div></div>
+</div>
+<style type="text/css">
+    .ec-ad .ec-row-title .ec-title {
+    	padding-left: 0;
+    }
+    .ec-ad .ec-img-list {
+    	width: 290px;
+    }
+    .ec-ad .ec-img-list .ec-img-item {
+    	margin-left: 0;
+    	margin-right: 10px;
+    }
+    </style>
+<div style="display:none">
+1
+2
+3
+</div>
+<div id="union-asplu" class="union-asplu line mod-noshadow wgt-ads"><iframe id="iframe968278_0" src="./C# 音乐播放器怎么弄_百度知道_files/jcnm.html" width="250" height="250" align="center,center" vspace="0" hspace="0" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" style="border:0; vertical-align:bottom;margin:0;" allowtransparency="true"></iframe></div>
+<div id="union-qbrightdown" class="union-qbrightdown line mod-noshadow wgt-ads"><iframe id="iframe1125477_0" onload="BAIDU_SSP_renderFrame(&#39;1125477_0&#39;, this);" src="./C# 音乐播放器怎么弄_百度知道_files/saved_resource.html" width="250" height="250" align="center,center" vspace="0" hspace="0" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" style="border:0; vertical-align:bottom;margin:0;" allowtransparency="true"></iframe></div>
+<div class="cms-slide cms-slide-lazy mod-noshadow">
+<script type="text/javascript">
+		F.context('cmsRight', [
+															
+							{
+					'url':'http://zhidao.baidu.com/activity/xiaojudeng',
+					'src':'http://iknow03.bosstatic.bdimg.com/tuiguangwei/xiaojudeng270170.png?t=1473066812'
+				},																		
+							{
+					'url':'https://zhidao.baidu.com/culture/topic?name=jigouhangjia',
+					'src':'http://img.baidu.com/img/iknow/sula2604/qbhangjia.jpeg?t=1473066812'
+				},																		
+							{
+					'url':'http://ciyuanfan.baidu.com/',
+					'src':'http://iknow05.bosstatic.bdimg.com/tuiguangwei/ciyuanfanshangxian.PNG?t=1473066812'
+				}							]);
+	</script>
+<div class="cms-scroll" id="cms-scroll">
+<div class="cms-mask carousel" id="cms-mask"><div class="carousel-inner"><div class="item" index="0" style="width: 100%; top: 0px; left: -100%;"><a rel="nofollow" alog-alias="qb-cms-mask" log="page:question,pos:cms_scroll_new,index:0" href="http://zhidao.baidu.com/activity/xiaojudeng" target="_blank"><img src="./C# 音乐播放器怎么弄_百度知道_files/xiaojudeng270170.png" alt=""></a></div><div class="item" index="1" style="width: 100%; top: 0px; left: -100%;"><a rel="nofollow" alog-alias="qb-cms-mask" log="page:question,pos:cms_scroll_new,index:1" href="https://zhidao.baidu.com/culture/topic?name=jigouhangjia" target="_blank" data-img="http://img.baidu.com/img/iknow/sula2604/qbhangjia.jpeg?t=1473066812"><img src="./C# 音乐播放器怎么弄_百度知道_files/qbhangjia.jpeg" alt=""></a></div><div class="item active" index="2" style="width: 100%; top: 0px; left: 0%;"><a rel="nofollow" alog-alias="qb-cms-mask" log="page:question,pos:cms_scroll_new,index:2" href="http://ciyuanfan.baidu.com/" target="_blank" data-img="http://iknow05.bosstatic.bdimg.com/tuiguangwei/ciyuanfanshangxian.PNG?t=1473066812"><img src="./C# 音乐播放器怎么弄_百度知道_files/ciyuanfanshangxian.PNG" alt=""></a></div></div><div class="cms-scroll-shadow"></div><div class="carousel-misc"><a class="carousel-control carousel-control-left" style="left: 97.5px;"></a><ol class="carousel-indicators"><li data-slide-to="0" class="first"></li><li data-slide-to="1" class=""></li><li data-slide-to="2" class="active"></li></ol><a class="carousel-control carousel-control-right"></a></div></div>
+</div>
+<p class="mt-15" id="cms-company">
+<a rel="nofollow" href="http://zhidao.baidu.com/liuyan" target="_blank" data-img="http://img.baidu.com/img/iknow/sula2015chunjie/zhenxiangwendaji116.jpg?t=1473066812">
+</a>
+</p>
+</div>
+<div class="cms-slide mod-noshadow">
+<div class="cms-inner">
+<p class="cms-link-title">精彩知识在知道</p>
+<ul class="pb-5 mt-5" id="cms-link">
+<li><a alog-action="qb-inner-link" href="http://zhidao.baidu.com/special/view/cooperation" target="_blank">百度知道品牌合作指南</a></li>
+<li><a alog-action="qb-inner-link" href="https://zhidao.baidu.com/liuyan" target="_blank">【真相问答机】，揭穿流言！</a></li>
+<li><a alog-action="qb-inner-link" href="http://yuedu.baidu.com/partner/browse/profile?id=0b0a8f77168884868762d627" target="_blank">免费领取《知道日报》主题专刊</a></li>
+<li><a alog-action="qb-inner-link" href="http://zhidao.baidu.com/bigdata/list" target="_blank">知道大数据，用数据解读生活点滴</a></li>
+</ul>
+</div>
+</div>
+</aside>
+</section>
+<div class="left-top-ads" style="margin: 30px 0;">
+<script type="text/javascript">
+                    // 广告拦截打点
+                    F.context('ads_log_toprequest', 1);
+                </script>
+<script type="text/javascript" src="./C# 音乐播放器怎么弄_百度知道_files/m.js"></script>
+<script type="text/javascript">
+                    // 防止被广告拦截后报错
+                    window.BAIDU_CLB_addOrientation = window.BAIDU_CLB_addOrientation || null;
+                    if (window.BAIDU_CLB_addOrientation) { 
+                        BAIDU_CLB_addOrientation('zdquery', "");
+                        BAIDU_CLB_addOrientation("zdclassid", "91");
+                        BAIDU_CLB_addOrientation("zhidaoqid", "168041777");
+                        BAIDU_CLB_fillSlot("1125478");
+                    }
+                </script><div id="BAIDU_SSP__wrapper_1125478_0"></div><script charset="utf-8" src="./C# 音乐播放器怎么弄_百度知道_files/jcnm(2)"></script><!-- 广告位：知道问答页通栏 -->
+<script type="text/javascript">BAIDU_CLB_SLOT_ID = "639890";</script>
+<script type="text/javascript" src="./C# 音乐播放器怎么弄_百度知道_files/o.js"></script><div id="BAIDU_SSP__wrapper_639890_0"></div><script charset="utf-8" src="./C# 音乐播放器怎么弄_百度知道_files/jcnm(3)"></script><script type="text/javascript">
+    /*知道问答页通栏*/
+    var cpro_id = "u2398732";
+</script>
+<script src="./C# 音乐播放器怎么弄_百度知道_files/c.js" type="text/javascript"></script><div id="BAIDU_SSP__wrapper_u2398732_0"><iframe id="iframeu2398732_0" src="./C# 音乐播放器怎么弄_百度知道_files/jcnm(4).html" width="960" height="90" align="center,center" vspace="0" hspace="0" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" style="border:0; vertical-align:bottom;margin:0;" allowtransparency="true"></iframe></div>
+</div>
+</div>
+<script type="text/javascript">
+window.baidu_hh_hotword={
+    id: [],
+    page_url: 'http://zhidao.' + 'baidu.com/question/168041777',
+    di: "u2146910",
+    maxword: 10,
+    frequency: 3
+}
+window.baidu_hh_hotword.id.push("best-content-2243092563");
+window.baidu_hh_hotword.id.push("answer-content-493642840");
+window.baidu_hh_hotword.id.push("answer-content-1163247764");
+</script>
+<script src="./C# 音乐播放器怎么弄_百度知道_files/w.js"></script>    <div class="left-promotion" id="left-promotion" style="left: 19.5px; top: 406.6px; width: 120px; height: 180px;"><div class="close-layer" style="right: 0px; top: 0px;"></div><img src="./C# 音乐播放器怎么弄_百度知道_files/G20_PCbanner120x180.gif"></div></div>
+
+
+		
+<div class="wgt-footer-new">
+    <div class="footer-wp">
+        <ul class="footer-list clearfix">
+            <li class="footer-list-item footer-list-guide">
+                <div class="footer-title"><span class="icon-guide"></span>新手帮助</div>
+                <ul class="footer-link clearfix">
+                    <li><a href="http://tieba.baidu.com/p/3615879106" target="_blank">如何答题</a></li>
+                    <li><a href="http://tieba.baidu.com/p/3615829242" target="_blank">获取采纳</a></li>
+                    <li><a href="http://tieba.baidu.com/p/3615827221" target="_blank">使用财富值</a></li>
+                </ul>
+            </li>  
+            <li class="footer-list-item footer-list-intro">
+                <div class="footer-title"><span class="icon-intro"></span>玩法介绍</div>
+                <ul class="footer-link clearfix">
+                    <li><a href="http://zhidao.baidu.com/shop" target="_blank">知道商城</a></li>
+                    <li><a href="http://zhidao.baidu.com/uteam" target="_blank">知道团队</a></li>
+                    <li><a href="http://zhidao.baidu.com/hangjia" target="_blank">行家认证</a></li>
+                    <li><a href="http://zhidao.baidu.com/s/hi-quality/index.html" target="_blank">高质量问答</a></li>
+                </ul>
+            </li>  
+            <li class="footer-list-item footer-list-sug">
+                <div class="footer-title"><span class="icon-sug"></span>投诉建议</div>
+                <ul class="footer-link clearfix">
+                    <li><a href="http://tousu.baidu.com/zhidao" target="_blank">举报不良信息</a></li>
+                    <li><a href="http://ikefu.baidu.com/web/zhishisousuo#" target="_blank">意见反馈</a></li>
+                    <li><a href="http://tousu.baidu.com/zhidao#3" target="_blank">投诉侵权信息</a></li>
+                    <!-- <li><a href="http://ikefu.baidu.com/web/zhishisousuo#" target="_blank">机器人道道</a></li>-->
+                </ul>
+            </li> 
+        </ul>
+    </div>
+    <div class="footer-new">
+        <p class="jt1128">
+         &#169;2016 Baidu&nbsp;&nbsp; <a rel="nofollow" href="http://www.baidu.com/duty/" target="_blank">使用百度前必读</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a rel="nofollow" href="http://help.baidu.com/question?prod_en=zhidao&amp;class=597&amp;id=1001104" target="_blank">知道协议</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a rel="nofollow" href="http://zhidao.baidu.com/special/view/cooperation" target="_blank">百度知道品牌合作</a>
+        </p>
+    </div>
+</div>
+
+
+	    
+<div id="anttongji"><img style="display:none" src="./C# 音乐播放器怎么弄_百度知道_files/dn_84_2.jpg"></div>
+
+        
+        
+<script type="text/javascript">
+            try {
+                (function() {var param_a = 10;var param_b = 180;var param_c = 165;var param_d = 237;param_a = param_a%3;param_b = param_b%3;param_c = param_c%3;var result = 0;if (param_a == param_b) {result = param_d + 100;} else if(param_b > param_c){result = param_d + 200;} else {result = param_d + 300;}var xhr = null;if (window.XMLHttpRequest) {xhr = new XMLHttpRequest(); } else if (window.ActiveXObject) {xhr = new ActiveXObject("Microsoft.XMLHTTP");}if(xhr) {xhr.open("POST", "/question/api/replynum?t=" + new Date().getTime(), true);xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");xhr.onload = function(){};var qid = "168041777";var logid = 1981410071;xhr.send("qid=" + qid + "&replyT=" + result + "&logid=" + logid);}})();
+            } catch (e) {
+                //...
+            }
+        </script>
+
+        
+                    
+
+        
+    <script>
+    void function(a,b,c,d,e,f){function g(b){a.attachEvent?a.attachEvent("onload",b,!1):a.addEventListener&&a.addEventListener("load",b)}function h(a,c,d){d=d||15;var e=new Date;e.setTime((new Date).getTime()+1e3*d),b.cookie=a+"="+escape(c)+";path=/;expires="+e.toGMTString()}function i(a){var c=b.cookie.match(new RegExp("(^| )"+a+"=([^;]*)(;|$)"));return null!=c?unescape(c[2]):null}function j(){var a=i("PMS_JT");if(a){h("PMS_JT","",-1);try{a=a.match(/{["']s["']:(\d+),["']r["']:["']([\s\S]+)["']}/),a=a&&a[1]&&a[2]?{s:parseInt(a[1]),r:a[2]}:{}}catch(c){a={}}a.r&&b.referrer.replace(/#.*/,"")!=a.r||alog("speed.set","wt",a.s)}}if(a.alogObjectConfig){var k=a.alogObjectConfig.sample,l=a.alogObjectConfig.rand;if("https:"===a.location.protocol){if(d="https://gss2.bdstatic.com/70cFsjip0QIZ8tyhnq"+d,!k||!l)return}else d="http://img.baidu.com"+d;k&&l&&l>k||(g(function(){alog("speed.set","lt",+new Date),e=b.createElement(c),e.async=!0,e.src=d+"?v="+~(new Date/864e5),f=b.getElementsByTagName(c)[0],f.parentNode.insertBefore(e,f)}),j())}}(window,document,"script","/hunter/alog/dp.min.js");
+    </script>
+	    <div style="display:none;">
+	        <script type="text/javascript">
+	            var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	            document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F6859ce5aaf00fb00387e6434e4fcc925' type='text/javascript'%3E%3C/script%3E"));
+	        </script><script src="./C# 音乐播放器怎么弄_百度知道_files/h.js" type="text/javascript"></script>
+	    </div>
+
+	<script type="text/javascript" src="./C# 音乐播放器怎么弄_百度知道_files/mod_96dd55b.js"></script><script type="text/javascript">require.resourceMap({"res":{"common:widget\/lib\/swfupload\/swfupload.js":{"url":"http:\/\/iknowpc.bdimg.com\/static\/common\/widget\/lib\/swfupload\/swfupload_b24a26d.js"},"common:widget\/js\/ui\/clipboard\/clipboard.js":{"url":"http:\/\/iknowpc.bdimg.com\/static\/common\/widget\/js\/ui\/clipboard\/clipboard_581e531.js"},"question:widget\/sample\/user\/info\/untreated-ask\/untreated-ask.js":{"url":"http:\/\/iknowpc.bdimg.com\/static\/question\/widget\/sample\/user\/info\/untreated-ask\/untreated-ask_b57e2e2.js","deps":["common:widget\/lib\/jquery\/jquery.js"]},"question:widget\/sample\/js\/video\/video.js":{"url":"http:\/\/iknowpc.bdimg.com\/static\/question\/widget\/sample\/js\/video\/video_fe31aae.js","deps":["common:widget\/js\/util\/tangram\/tangram.js","common:widget\/js\/util\/suffix-str\/suffix-str.js","common:widget\/js\/util\/log\/log.js"]},"question:widget\/sample\/js\/submitjump\/submitjump.js":{"url":"http:\/\/iknowpc.bdimg.com\/static\/question\/widget\/sample\/js\/submitjump\/submitjump_6da7329.js","deps":["common:widget\/js\/util\/tangram\/tangram.js","common:widget\/js\/util\/event\/event.js","common:widget\/js\/logic\/submit\/submit.js","common:widget\/js\/util\/log\/log.js","common:widget\/js\/ui\/dialog\/dialog.js"]},"question:widget\/sample\/js\/psask-bindsms\/psask-bindsms.js":{"url":"http:\/\/iknowpc.bdimg.com\/static\/question\/widget\/sample\/js\/psask-bindsms\/psask-bindsms_f7304fd.js","deps":["common:widget\/js\/util\/tangram\/tangram.js","common:widget\/js\/util\/log\/log.js","common:widget\/js\/util\/event\/event.js","common:widget\/js\/ui\/dialog\/dialog.js","common:widget\/js\/logic\/phone-bind\/phone-bind.js"]},"question:widget\/sample\/js\/accuse\/accuse.js":{"url":"http:\/\/iknowpc.bdimg.com\/static\/question\/widget\/sample\/js\/accuse\/accuse_5ce5fb1.js","deps":["common:widget\/js\/util\/tangram\/tangram.js","common:widget\/js\/util\/log\/log.js","common:widget\/js\/util\/event\/event.js","common:widget\/js\/logic\/login\/login.js","common:widget\/js\/ui\/dialog\/dialog.js"]},"question:widget\/sample\/js\/admin\/officialAdmin\/officialAdmin.js":{"url":"http:\/\/iknowpc.bdimg.com\/static\/question\/widget\/sample\/js\/admin\/officialAdmin\/officialAdmin_81253b6.js","deps":["common:widget\/js\/util\/tangram\/tangram.js","common:widget\/js\/ui\/dialog\/dialog.js","common:widget\/js\/logic\/category\/category.js","common:widget\/js\/util\/event\/event.js"]},"question:widget\/sample\/js\/set-tag\/set-tag.js":{"url":"http:\/\/iknowpc.bdimg.com\/static\/question\/widget\/sample\/js\/set-tag\/set-tag_99221db.js","deps":["common:widget\/js\/util\/tangram\/tangram.js","common:widget\/js\/util\/event\/event.js","common:widget\/js\/ui\/base\/base.js","common:widget\/js\/util\/template\/template.js","common:widget\/js\/ui\/dialog\/dialog.js","common:widget\/js\/ui\/scrollbar\/scrollbar.js","common:widget\/js\/util\/tangram\/string.js"]},"question:widget\/sample\/js\/admin\/userAdmin\/userAdmin.js":{"url":"http:\/\/iknowpc.bdimg.com\/static\/question\/widget\/sample\/js\/admin\/userAdmin\/userAdmin_f872ac9.js","deps":["common:widget\/js\/util\/tangram\/tangram.js","common:widget\/js\/util\/event\/event.js","common:widget\/js\/ui\/dialog\/dialog.js","common:widget\/js\/logic\/category\/category.js","question:widget\/sample\/js\/set-tag\/set-tag.js","common:widget\/lib\/jquery.placeholder\/jquery.placeholder.js"]},"question:widget\/sample\/js\/unloginask-bindsms\/unloginask-bindsms.js":{"url":"http:\/\/iknowpc.bdimg.com\/static\/question\/widget\/sample\/js\/unloginask-bindsms\/unloginask-bindsms_2c739ff.js","deps":["common:widget\/js\/util\/tangram\/tangram.js","common:widget\/js\/util\/log\/log.js","common:widget\/js\/util\/event\/event.js","common:widget\/js\/ui\/dialog\/dialog.js"]},"question:widget\/sample\/js\/audio\/jplayer\/jplayer.js":{"url":"http:\/\/iknowpc.bdimg.com\/static\/question\/widget\/sample\/js\/audio\/jplayer\/jplayer_2e57073.js","deps":["common:widget\/lib\/jquery\/jquery.js"]},"question:widget\/sample\/js\/audio\/audio.js":{"url":"http:\/\/iknowpc.bdimg.com\/static\/question\/widget\/sample\/js\/audio\/audio_3dc51c9.js","deps":["common:widget\/js\/util\/tangram\/tangram.js","common:widget\/js\/util\/log\/log.js","question:widget\/sample\/js\/audio\/jplayer\/jplayer.js"]},"question:widget\/sample\/js\/mavin-msg\/mavin-msg.js":{"url":"http:\/\/iknowpc.bdimg.com\/static\/question\/widget\/sample\/js\/mavin-msg\/mavin-msg_aa3f9f0.js","deps":["common:widget\/lib\/jquery\/jquery.js","common:widget\/js\/util\/event\/event.js","common:widget\/js\/ui\/base\/base.js","common:widget\/js\/logic\/msg\/msg.js"]},"question:widget\/sample\/js\/weather\/weather.js":{"url":"http:\/\/iknowpc.bdimg.com\/static\/question\/widget\/sample\/js\/weather\/weather_fe50dc2.js","deps":["common:widget\/js\/util\/tangram\/tangram.js","common:widget\/js\/util\/log\/log.js","common:widget\/lib\/jquery.placeholder\/jquery.placeholder.js"]}},"pkg":[]});</script><script type="text/javascript" src="./C# 音乐播放器怎么弄_百度知道_files/framework_40ffc39.js"></script><script type="text/javascript" src="./C# 音乐播放器怎么弄_百度知道_files/more_01242af.js"></script><script type="text/javascript" src="./C# 音乐播放器怎么弄_百度知道_files/qianbao-dialog_a3c13c6.js"></script><script type="text/javascript" src="./C# 音乐播放器怎么弄_百度知道_files/validate_d964132.js"></script><script type="text/javascript" src="./C# 音乐播放器怎么弄_百度知道_files/module_24cc872.js"></script><script type="text/javascript" src="./C# 音乐播放器怎么弄_百度知道_files/top-nav-bar_1ae0ffe.js"></script><script type="text/javascript" src="./C# 音乐播放器怎么弄_百度知道_files/business_34bbca9.js"></script><script type="text/javascript" src="./C# 音乐播放器怎么弄_百度知道_files/share_93e890f.js"></script><script type="text/javascript" src="./C# 音乐播放器怎么弄_百度知道_files/ck_d72b01d.js"></script><script type="text/javascript" src="./C# 音乐播放器怎么弄_百度知道_files/sample_module_7f7937e.js"></script><script type="text/javascript" src="./C# 音乐播放器怎么弄_百度知道_files/newbest_b975c4d.js"></script><script type="text/javascript" src="./C# 音乐播放器怎么弄_百度知道_files/basic_3a8c290.js"></script><script type="text/javascript" src="./C# 音乐播放器怎么弄_百度知道_files/daily_0132585.js"></script><script type="text/javascript">
+!function(){    require.async('common:widget/userbar-new/userbar-new.js');
+}();
+!function(){    require.async('common:widget/js/logic/search-box/search-box.js');
+}();
+!function(){    require.async('common:widget/menu/menu.js', function(menu){
+    	menu.init();
+    });
+    // 导航menu可用时间打点
+    alog && alog('speed.set', 'c_menu', +new Date); alog.fire && alog.fire("mark");
+}();
+!function(){	require.async('question:widget/sample/top-nav-bar/top-nav-bar.js');
+}();
+!function(){    require.async('question:widget/sample/ask/ask.js');
+}();
+!function(){    require.async('question:widget/sample/value-comment/value-comment.js',function(vc){
+        vc.init('2243092563');
+    });
+}();
+!function(){	require.async(['common:widget/lib/jquery/jquery.js', 'common:widget/js/util/log/log.js'], function($, log) {
+		if ($('.wgt-best .best-text .answer-expand').size() != 0) {
+			log.addKey({
+				answer_expand_show: 1
+			});
+		}
+        $(".wgt-best .best-text").on('click', ".answer-expand", function(e) {
+        	$(this).hide();
+        	$(".wgt-best .best-text .answer-expand-content").hide();
+        	$(".wgt-best .best-text .answer-collapse-content").show();
+        	$(".wgt-best .best-text .answer-collapse").css('display', 'block');
+        	log.send({page:'question',pos:'qb-detail-expand-btn-click'});
+        });
+        $(".wgt-best .best-text").on('click', ".answer-collapse", function(e) {
+        	$(this).hide();
+        	$(".wgt-best .best-text .answer-collapse-content").hide();
+        	$(".wgt-best .best-text .answer-expand-content").show();
+        	$(".wgt-best .best-text .answer-expand").show();
+        });
+    });
+}();
+!function(){    require.async('question:widget/sample/value-comment/value-comment.js',function(vc){
+        vc.init('493642840');
+    });
+}();
+!function(){    require.async('question:widget/sample/value-comment/value-comment.js',function(vc){
+        vc.init('1163247764');
+    });
+}();
+!function(){    require.async('question:widget/sample/answers/answers.js', function(ans){
+                ans.insertBest();
+            });
+}();
+!function(){    require.async('common:widget/js/util/log/log.js', function(log) {        
+        // 展现相关问题的PV，ps：不知道以前怎么这么写，related_search_show和网友都在找参数是一样的？
+        log.addKey({related_search_show: '1'});
+        // 为您推荐展现pv
+        log.addKey({bottom_union: '1'});
+    });
+}();
+!function(){    require.async('question:widget/sample/related/related.js', function(rel){
+        rel({
+            cmsRelq: "",
+            cmsRelqrl: "",
+            isLog: false                    });
+    });
+}();
+!function(){    require.async(['common:widget/js/util/tangram/tangram.js', 'common:widget/js/util/log/log.js'], function($, log) {        
+        // 展现相关问题的PV
+        log.addKey({topic_show: '1'});
+
+        // 实验
+        
+        var relateTopicQids = [];
+        $('#wgt-topic a[data-qid]').each(function(){
+            relateTopicQids.push($(this).data('qid'));
+        });
+        F.context('page').relateTopicQids = relateTopicQids.join('_');
+    });
+}();
+!function(){    require.async('common:widget/js/util/log/log.js', function(log) {        
+        // 展现相关问题的PV，ps：不知道以前怎么这么写，related_search_show和网友都在找参数是一样的？
+        log.addKey({related_search_show: '1'});
+        // 网友都在找展现pv
+        log.addKey({newqb_search_show: '1'});
+    });
+}();
+!function(){        require.async('common:widget/js/util/log/log.js', function(log){
+            //展现推送问题的PV
+            log.addKey({push: '1'});
+        });
+    }();
+!function(){    require.async('question:widget/sample/user/info/basic/basic.js');
+
+            require.async(['common:widget/js/util/tangram/tangram.js', 'common:widget/js/logic/sign-in/sign-in.js', 'common:widget/js/util/log/log.js'], function($, SignIn, Log){
+            Log.send({
+                'type': 2014,
+                'action': 'pv',
+                'fr': 'qb',
+                'pos': 'signin-entrance'
+            });
+
+            $('.go-sign-in').click(function(e){
+                e.preventDefault();
+
+                Log.send({
+                    'type': 2014,
+                    'action': 'click',
+                    'fr': 'qb',
+                    'pos': 'signin-entrance'
+                });
+
+                new SignIn({
+                    year: '2016',
+                    month: '09',
+                    day: '08'
+                });
+            });        
+        });
+    }();
+!function(){require.async('question:widget/sample/user/info/daily/daily.js', function(Daily){
+	Daily.init({"date":"2016.09.08","term":"1107","list":[{"id":"22509","title":"\u79cb\u5929\u6765\u4e86\uff0c\u6211\u4eec\u8be5\u5982\u4f55\u201c\u8d34\u79cb\u8198\u201d\uff1f","mt_img_src":"http:\/\/mt1.baidu.com\/timg?wh_rate=0&wapiknow&quality=100&size=w250&sec=0&di=bd847aa3f903d0b6dd1a52d2d133524d&src=http%3A%2F%2Fiknow02.bosstatic.bdimg.com%2Fzhidaoribao%2F2016%2F0908%2Fqb.jpg"},{"id":"22620","title":"\u7eb8\u7684\u5272\u4f24\u4e0d\u6df1\uff0c\u4f46\u4e3a\u4ec0\u4e48\u90a3\u4e48\u75bc\uff1f","mt_img_src":"http:\/\/mt1.baidu.com\/timg?wh_rate=0&wapiknow&quality=100&size=w250&sec=0&di=ff7d3911264aa6527cdff426dd14598d&src=http%3A%2F%2Fiknow02.bosstatic.bdimg.com%2Fzhidaoribao%2F2016%2F0908%2Fzp.jpg"},{"id":"22575","title":"\u4e16\u754c\u4e0a8\u5927\u602a\u5f02\u7684\u516c\u5bd3\uff0c\u4f60\u77e5\u9053\u6709\u54ea\u4e9b\u5417\uff1f","mt_img_src":"http:\/\/mt1.baidu.com\/timg?wh_rate=0&wapiknow&quality=100&size=w250&sec=0&di=c28d9163e0c5cb4662ec58b57509592b&src=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fwh%253D800%252C450%2Fsign%3Df1dd8fb719dfa9ecfd7b5e1f52e0db37%2F962bd40735fae6cd788746ca07b30f2442a70f6d.jpg"},{"id":"22642","title":"\u8111\u6d1e\u5411\uff1a\u600e\u6837\u5728\u6708\u7403\u4e0a\u5efa\u4e00\u680b\u9ad8\u697c\u5927\u53a6\uff1f","mt_img_src":"http:\/\/mt1.baidu.com\/timg?wh_rate=0&wapiknow&quality=100&size=w250&sec=0&di=85db0980d0ea5dafd0d35a08909d3e87&src=http%3A%2F%2Fiknow02.bosstatic.bdimg.com%2Fzhidaoribao%2F2016%2F0908%2Fyq.jpg"},{"id":"22363","title":"\u6cd5\u5b98\u4e3a\u4ec0\u4e48\u8981\u6234\u5047\u53d1\uff1f\u539f\u56e0\u7adf\u662f\u56e0\u4e3a\u6885\u6bd2\uff01","mt_img_src":"http:\/\/mt1.baidu.com\/timg?wh_rate=0&wapiknow&quality=100&size=w250&sec=0&di=5a689c74415a683b1f1e3e230ab7b391&src=http%3A%2F%2Fiknow02.bosstatic.bdimg.com%2Fzhidaoribao%2F2016%2F0908%2Ffg.jpg"},{"id":"22595","title":"\u518d\u73b02300\u5e74\u524d\u6728\u4e43\u4f0a\u5934\u90e8\uff1a\u662f\u4e2a\u7f8e\u5973","mt_img_src":"http:\/\/mt1.baidu.com\/timg?wh_rate=0&wapiknow&quality=100&size=w250&sec=0&di=b6f9a90365ebd75aed98f81a0507a01b&src=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fwh%253D800%252C450%2Fsign%3D93291ba12e9759ee4a0568c382cb6f22%2Fc995d143ad4bd113e823c89e52afa40f4afb05ab.jpg"},{"id":"22532","title":"\u6c11\u56fd\u76d7\u5893\u7b2c\u4e00\u4eba\uff0c\u624b\u6301\u5315\u9996\u6253\u5f00\u4e86\u6148\u79a7\u7684\u68fa\u6750","mt_img_src":"http:\/\/mt1.baidu.com\/timg?wh_rate=0&wapiknow&quality=100&size=w250&sec=0&di=7e8272f9f06e404fe7465c967e2beef6&src=http%3A%2F%2Fc.hiphotos.baidu.com%2Fzhidao%2Fwh%253D800%252C450%2Fsign%3D55a1b845bc8f8c54e386cd270a1901c1%2F8644ebf81a4c510f23099cb16859252dd52aa548.jpg"}]}, '0');
+});
+}();
+!function(){		require.async('common:widget/js/logic/union/union.js', function(union){
+			// args[2, 3]自定义定向使用, common:union中有限制只能调用一次;
+			union('968278', 'union-asplu', {
+				'zdquery'       : '',
+				'zdclassid' : '91',
+				'zhidaoqid'         : '168041777'
+			});
+		});
+	}();
+!function(){		require.async('common:widget/js/logic/union/union.js', function(union){
+			// args[2, 3]自定义定向使用, common:union中有限制只能调用一次;
+			union('1125477', 'union-qbrightdown', {
+				'zdquery'       : '',
+				'zdclassid' : '91',
+				'zhidaoqid'         : '168041777'
+			});
+		});
+	}();
+!function(){    require.async('question:widget/sample/ad-right/ad-right.js');
+}();
+!function(){    require('common:widget/js/logic/ie-prompt/ie-prompt.js');
+}();
+!function(){    
+require.async(['common:widget/js/util/tangram/tangram.js', 'common:widget/js/util/log/log.js', 'common:widget/js/util/event/event.js', 'common:widget/js/logic/submit/submit.js', 'common:widget/js/ui/dialog/dialog.js', 'question:widget/sample/js/file/file.js', 'question:widget/sample/js/left-promotion/left-promotion.js', 'question:widget/sample/js/video/video.js', 'common:widget/js/ui/tip/tip.js', 'question:widget/sample/ask/share/share.js'], function($, log, ec, Submit, Dialog, File, LeftPromotion, Video, Tip, share){
+
+    // 打点QB页用户可操作时间
+    alog('speed.set', 'drt', +new Date);
+    // F.context('new_qb_fr', 'new_qb_' + 213);
+
+    $(function(){ 
+                    require.async('question:widget/sample/js/submitjump/submitjump.js',function(submitjump){
+                submitjump.init();
+            });
+    		            if($.cookie.get('IK_USERVIEW') != '1'){
+                $.sio("http://tongji.zhidao.baidu.com/common/js/base_widget.js?t="+(new Date).getTime()).callByBrowser();
+                $.cookie.set("IK_USERVIEW", "1",{path:'/', expires:28800000});
+            }
+                            require.async('question:widget/sample/js/accuse/accuse.js', function(accuse){
+                    accuse.init({ response: 'wgt-ask', target: '#wgt-ask .accuse-area' });
+                    if (!$.isEmptyObject(F.context('answers'))){
+
+                        accuse.init({ target: '.wgt-best .accuse-area',	response: 'wgt-best' });
+
+                        accuse.init({ target: '.wgt-recommend .accuse-area', response: 'wgt-recommend' });
+
+                        accuse.init({ target: '.wgt-special .accuse-area', response: 'wgt-special' });
+
+                        accuse.init({ response: 'answer', target: '#wgt-answers .accuse-area' });
+                    }
+                });
+                if (F.context('user')['internalAdmin']) {
+                    require.async('question:widget/sample/js/admin/officialAdmin/officialAdmin.js', function(A){
+                        A.init();
+                   }); 
+                }
+                if (F.context('user')['isUserAdmin']=='1') {
+                    require.async('question:widget/sample/js/admin/userAdmin/userAdmin.js', function(A){
+                        A.init();
+                   }); 
+                } 
+                require.async('common:widget/js/logic/complain/complain.js', function(complain){
+                    $('.complain-deleted').click(function(ev){
+                        ev.preventDefault();
+                        complain(F.context('page')['qid'], $(this).attr('data'));
+                    });
+                });
+
+            
+                
+            log.addKey({
+                qbleftdown: $('.qbleftdown').find('li').size(),
+                qbrightdown:$('.qbrightdown').find('.r').size()
+            });
+            if ( $( '.qbleftdown a' ).size() ) {
+                log.addKey({
+                    ec_ads: '2',
+                    ec_ads_count: $('.qbleftdown').find('a.ec_ad_title, span.ec_qad_title, a.EC_ad_title').size()
+                }); 
+                $('.qbleftdown a').click(function(){
+                    var $parent = $( this ).parent();
+                    if ( this.id || this.className == 'EC_ad_title'
+                        || $(this).hasClass('ec_ik220_adtitle')
+                        || $(this).hasClass('ec_ik220_desc')
+                        || $parent.hasClass( 'EC_ads_answer' )
+                        || this.className == 'EC_ads_listurl'
+                        || this.className == 'ec_ad_title'
+                        || $parent.hasClass('ec_qad_title')
+                        || $parent.hasClass('ec_qad_answerer') ) {
+                        log.send({
+                            type: 2014,
+                            evtType: 'click',
+                            pos: 'ec_ads'
+                        });
+                    }
+                });
+            }
+            require.async('question:widget/sample/js/card/card.js', function(card){
+                $('.user-name').each(function(index, item){
+                    new card({ target: item, type: 'normal' });
+                });
+                $('.mavin-name').each(function(index, item){
+                    new card({target: item, type: 'mavin' });
+                });
+                $('.opendev-name').each(function(index, item){
+                    new card({target: item, type: 'opendev'});
+                });
+                $('.uadmin-a').each(function(index, item) {
+                    new card({target: item, type: 'uadminIcon'});
+                });
+                $('.business-name').each(function(index, item){
+                    new card({target: item, type: 'business' });
+                });
+                $('.quality-business-name').each(function (index, item) {
+                    new card({target: item, type: 'qbusiness'});
+                });
+            });
+            $('.fixed-ask-e').click(function(e){
+                e.preventDefault();
+                var username = $(this).attr('username');
+                require.async('common:widget/js/logic/iask/iask.js', function(fixedAsk){
+                    fixedAsk(username);
+                });
+            });
+            $('.replyask-shrink a').click(function(e){
+                e.preventDefault();
+                var flag = this.innerHTML.indexOf('更多追问') != -1;
+
+                var dl = $(this).html( flag ? '<i class="i-incline-up"></i>收起追问' : '<i class="i-incline-down"></i>更多追问' ).parent().prevAll('.replyask');
+                $($.makeArray(dl).reverse().slice(flag ? 0 : 3, dl.length)).css('display', flag ? 'block' : 'none');
+            });
+            $('.replyask-box').each(function (index, item) {
+                if ($(item).find('.replyask-shrink').size() == 0) {
+                    if ($(item).find('.ask-supply').size() == 2) {
+                        $(item).find('.replyask').last().find('.ask-supply-line').hide();
+                    }
+                    if ($(item).find('.ask-supply').size() == 1) {
+                        $(item).find('.ask-supply-line').hide();
+                    }
+                    $(item).find('.ask-supply-line').last().hide();
+                }
+            });
+            if($('.thunder-wrap').size()){
+                require.async('question:widget/sample/js/thunder/thunder.js', function(thunder){
+                    $(function(){
+                        thunder.init();
+                    });
+                });
+            }
+            $.each(F.context('answers'), function(index, item){
+                if(item.user){
+                    if (item.user.isFromBusiness > 0) {
+                        $.ajax({
+                            url: '/business/submit/onbusinessbrowse',
+                            type: 'POST',
+                            dataType: 'json',
+                            data: {
+                                businessId: item.user.business.businessId,
+                                page: '1',
+                                token: F.context('businessToken')
+                            }
+                        })
+                        .done(function () {
+                        })
+                        .fail(function () {
+                        });
+                    }   
+                }
+            });
+            $(document).on('click', '.ikqb_img', function(){
+                log.send({
+                    type: 2014,
+                    bigimg: 'click'
+                });
+            });
+            $('a.optimus').on('click', function() {
+                log.send({
+                    type: 2014,
+                    area: 'ad-right-optimus',
+                    action: 'click',
+                    cid: F.context('page')['cid'],
+                    cidTop: F.context('page')['cidTop'],
+                    cidMid: F.context('page')['cidMid']
+                });
+            });
+
+            $('#wgt-nologin-daily').click(function(e){
+                e.stopPropagation();
+
+                if($(e.target).closest('#daily-carousel').size() && !$(e.target).closest('.carousel-control').size()){
+                    log.send({
+                        type: 2014,
+                        page: 'question',
+                        pos: 'no-login-daily',
+                        action: 'click'
+                    });
+                }
+            });
+
+            $('.wgt-daily').on('click', 'a', function(){
+                log.send({
+                    type: 2014,
+                    page: 'question',
+                    pos: 'login-daily',
+                    action: 'click'
+                });
+            });
+            $('.qbrightdown a').click(function(){
+                log.send({
+                    type: 2014,
+                    qid: F.context('page')['qid'],
+                    area: 'medical-right-txt-ads',
+                    action: 'click'
+                });
+            });
+            if($('ikaudio').size()){
+                log.addKey({
+                    'audio' : 1
+                });
+
+                require.async('question:widget/sample/js/audio/audio.js', function(audio){
+                    audio.init();
+                });
+            }
+            require.async('question:widget/sample/js/comment/comment.js', function(comm){
+                comm.getCount();
+            });
+            $('.recommend-text, .best-text, .answer-text, .replyask-content').each(function(i, answerText){
+                $(answerText).find('pre[t="code"]').each(function(i, pre){
+                    var loadSyntax = function(){
+                        SyntaxHighlighter(pre);
+                    };
+                    
+                    $(pre).text($(pre).html($(pre).html().replace(/<br\s*\/?>/ig, '##IK_LINEBREAK##')).text().split('##IK_LINEBREAK##').join('\n'));
+
+                    $(pre).addClass('brush:'+$(pre).attr('l')+';toolbar:false;');
+                    if (window.SyntaxHighlighter) {
+                        SyntaxHighlighter.highlight(pre);
+                        $(answerText).find('.syntaxhighlighter .code .line').each(function(index, line){
+                            $(answerText).find('.syntaxhighlighter .gutter .line').eq(index).height($(line).height());
+                        });
+                    } else {
+                        $.sio('http://img.iknow.bdimg.com/libs/SyntaxHighlighter/shCore.min.js').callByBrowser(function(){
+                            SyntaxHighlighter.defaults['quick-code'] = false;
+                            SyntaxHighlighter.config.stripBrs = true;
+                            SyntaxHighlighter.highlight(pre);
+                            $(answerText).find('.syntaxhighlighter .code .line').each(function(index, line){
+                                $(answerText).find('.syntaxhighlighter .gutter .line').eq(index).height($(line).height());
+                            });
+                        });
+                    }
+                });
+
+                $(answerText).find('ikvideo').each(function(i, video){
+                    var id = 'VIDEO_' + $.id(),
+                        src = $(video).attr('src'),
+                        sid;
+
+                    var container = $('<div/>').attr('id', id).insertBefore($(video));
+                    if (src.indexOf('youku') > -1 && (sid = src.match(/sid\/(.*?)[\?\/]/))) {
+                        if (sid[1]) {
+                            src = 'http://player.youku.com/player.php/sid/'+sid[1]+'/v.swf';
+                        }
+                    }
+
+                    container.html('<embed src="'+src+'" allowFullScreen="true" quality="high" width="'+$(video).attr('width')+'" height="'+$(video).attr('height')+'" align="'+$(video).attr('align')+'" allowScriptAccess="never" type="application/x-shockwave-flash"></embed>');
+                });
+            });
+
+                        require.async('common:widget/js/ui/lazyload/lazyload.js', function(lazyload){
+            $('.wgt-replyer-best .avatar-48 a, .wgt-replyer-best .avatar-66 a, .wgt-replyer-special .avatar-66 a,.wgt-replyer-best .avatar-69 a, .wgt-replyer-best .avatar-70 a, .wgt-replyer-best .avatar-66 a, #cms-company a').lazyload();
+        });
+        $('.ikqb-map').each(function(index, item) {
+            var ifreamObj = $("<iframe/>").attr({
+                frameborder: '0'
+                ,width:"430" 
+                ,height:"310"
+                ,style: 'display:none;'
+                ,className: 'answer-map'
+            }),
+            tmpsrc = $(item).attr("map") || $(item).attr("src");
+            ifreamObj.attr('src', "http://zhidao.baidu.com/html/map" + tmpsrc.replace(/^iknow/i, ''));
+
+            $(item).before(ifreamObj).remove();
+            ifreamObj.after(
+                $("<p/>").addClass('f-aid').html("本数据来源于百度地图，最终结果以百度地图最新数据为准。")
+            ).show();
+        });
+                var mavinUidAry = [];
+        $.object.each(F.context('answers'), function(item, key){
+            if(item.user && item.user.mavinName){
+                mavinUidAry.push(item.uid);
+            }
+        });
+
+        if(mavinUidAry.length){
+            var options = {
+                uids: mavinUidAry.join(',')
+            };
+
+            $.post('/mavin/api/getmavinpv', options);
+        }
+        
+            
+
+                                                    log.addKey({
+                nsma: "2"
+            });
+                
+                        
+                            log.addKey({
+                asp_new_graphic_ad: "none"
+            });
+                            log.addKey({
+                ec_new_graphic_ad: "285"
+            });
+
+                            log.addKey({
+                    ec_new_graphic_ad_show: "1"
+                });
+                                    if ($('video.edui-faked-video').size() > 0) {
+            Video.init();
+        }
+                   
+                require.async('common:widget/js/logic/ut/ut.js', function(UT){
+            UT.start(['userbar','header','wgt-ask','answer-editor','wgt-answers']);
+        });
+
+        if ( $('file').size() == 0 ) {
+            logPV();
+        } else {
+            File.init(logPV);
+        }
+        
+        if (F.context('user')['isUserAdmin'] != '1'){
+            require.async('question:widget/sample/js/select-search/select-search.js', function(A){
+                A.init();
+            }); 
+        }
+                var adTopImg = $('.adTopImg');
+        if(adTopImg.length && adTopImg.css('display') != 'none') {
+            log.addKey({
+                adTopImg_new: 1
+            });
+            adTopImg.on('click', function() {
+                log.send({
+                    page: 'question',
+                    pos: 'adTopImg_new',
+                    action: 'click',
+                    type: 2014
+                });
+            });
+        }
+        
+        log.init({key:2014, query: 'body',action:'click'});
+        function logPV(){
+            var logOptions = {
+                type: 2014,
+                page: 'question', 
+                action: 'entrance',
+                screen: parseInt($('body').height()/$(window).height()),
+                qid: F.context('page')['qid'],
+                cid: F.context('page')['cid'],
+                view: F.context('page').isView,
+                cidTop: F.context('page')['cidTop'],
+                cidMid: F.context('page')['cidMid'],
+                refer: document.referrer
+            };
+            log.addKey({
+                 sample_new_qb: 213
+            });
+
+            log.addKey({
+                 qid: F.context('page')['qid']
+            });
+
+            if (F.context('page').relateQids) {
+                logOptions.relateQids = F.context('page').relateQids;
+            }
+
+            if (F.context('page').relateTopicQids) {
+                logOptions.relateTopicQids = F.context('page').relateTopicQids;
+            }
+            if ($('a.optimus').length) {
+                log.addKey({'optimus': 1});
+            }
+            if ($('.classinfo').length) {
+                log.addKey({'classinfo': 1});
+            }
+            var uadminIcon = $('.uadmin-a');
+            var uadminIconSize = uadminIcon.length;
+            if (uadminIconSize) {
+                logOptions.uadminIconNum = uadminIconSize;
+            }
+            
+            setTimeout(function(){
+                log.send(logOptions, true);
+            }, 100);
+        }
+                    log.addKey({'qb_test_case': '16'});
+                var loc_ans = $.url.getQueryValue(location.href, 'loc_ans');
+        if(!loc_ans) {
+            var myAnswerList = $('.wgt-best .answer-mine, .wgt-recommend .answer-mine, .wgt-special .answer-mine'),
+                myAnswer = null; 
+            if(myAnswerList.size()){        
+                myAnswer = myAnswerList.first();        
+                setTimeout(function(){
+                    $(document).scrollTop(myAnswer.offset().top - 10);
+                }, 200);       
+            }
+        }else {
+            var locAnswerList = $('.wgt-best .answer, .wgt-recommend .answer, .wgt-special .answer'),
+                locAnswer = null;
+            locAnswerList.each(function(index, item) {
+                if($(item).attr("id").indexOf(loc_ans) != -1) {
+                    locAnswer = $(item);
+                }
+            });
+            if(locAnswer) {
+                setTimeout(function(){
+                    $(document).scrollTop(locAnswer.parent().offset().top - 10);
+                }, 200);  
+            }
+        }
+        if (F.context('egg')) {
+            require.async('question:widget/sample/js/egg/egg.js', function(egg){
+                $(function(){
+                    egg.init(F.context('egg'));
+                });
+            });
+        }
+        var grid68  = $('.qb-content'), 
+            qid = F.context('page')['qid'];
+        $.each({
+            'qb-content'            : '.q-content a@',                      
+            'qb-supply-content'     : '.q-supply-content a@',               
+            'qb-best-text'          : '.wgt-best .best-text a@',            
+            'qb-special-bast-text'  : '.wgt-special .best-text a@',         
+            'qb-recommend-text'     : '.wgt-recommend .recommend-text a@',  
+            'qb-answer-text'        : '.answer-text a@',                    
+            'qb-replyask-ask'       : '.ask+dd a',                          
+            'qb-replyask-reply'     : '.reply+dd a',                        
+            'qb-best-thank'         : '.thank pre a',                       
+            'qb-answer-refer'       : '.answer-refer a'                     
+        }, function(key, val){
+            var aLink = grid68.find( val.replace(/\@$/, '[title!="点击查看大图"]') )
+                        .not('.app-keyword,.inner-link')
+                        .filter(function(){ 
+                            return this.getAttribute('href').match(/^http/i) && this.innerHTML != '' && !$(this).closest('.ed2k-wrap').size() && !$(this).closest('.thunder-wrap').size() 
+                        });
+            if(aLink.length > 0){
+                $(aLink).each(function(i,item){
+                    log.send({
+                        'type'  : 2014,
+                        'page'  : 'question',
+                        'qid'   : qid,
+                        'area'  : key,
+                        'action': 'linkPv',
+                        'text'  : item.getAttribute('href'),
+                        'host'  : item.getAttribute('href').split('/')[2]
+                    });
+                });
+            }
+            aLink.click(function(){
+                log.send({
+                    'type'  : 2014,
+                    'page'  : 'question',
+                    'qid'   : qid,
+                    'area'  : key,
+                    'action': 'linkClick',
+                    'text'  : this.getAttribute('href'),
+                    'host'  : this.getAttribute('href').split('/')[2]
+                });
+            });
+            grid68.find( val.replace(/\@$/, '') ).attr('rel', 'nofollow');
+        });
+        $(document).keydown(function(e){
+            if(e.ctrlKey && e.keyCode == 67){
+                var isStandard = Boolean(window.getSelection),
+                    selection = isStandard ? window.getSelection() : document.selection.createRange(),
+                    text = (isStandard ? selection + '' : selection.text).replace(/\n+/g,''),
+                    textLen = text.length;
+                log.send({
+                    type: 2014,
+                    page: 'question',
+                    qid: F.context('page')['qid'],
+                    uid: F.context('user')['id'],
+                    action: 'ctrl+c',
+                    text: (textLen > 0 && textLen < 50) ? text : ''
+                });
+            }
+        });
+        var BAIDUID = $.cookie.get('BAIDUID') ? $.cookie.get('BAIDUID') : '0',
+            recordkey = 'IK_' + BAIDUID.split(':')[0],
+            recordCookie = $.cookie.get(recordkey) || 0,
+            recordCidKey = 'IK_CID_'+F.context('page').cidTop,
+            recordCidCookie = $.cookie.get(recordCidKey) || 0,
+            cookieOpt = {
+                expires : 1000*60*60*24*365,
+                path : '/'
+            };
+        $.cookie.set(recordkey, parseInt(recordCookie) + 1, cookieOpt);
+        $.cookie.set(recordCidKey, parseInt(recordCidCookie) + 1, cookieOpt);
+        $.cookie.remove(recordkey,{
+            path : '/question'
+        });
+        var cookieArr = document.cookie && document.cookie.split('; ');
+        if(cookieArr.length){
+            $.each(cookieArr, function(i, item){
+                var cookieKey = item.split('=')[0];
+                if(cookieKey != recordkey && cookieKey.match(/IK_[0-9A-Z]{32}/)){
+                    $.cookie.remove(cookieKey, {path: '/'});
+                }
+            });
+        }
+        if ($.cookie.get('IK_REFER_QID')) {
+            $.cookie.remove('IK_REFER_QID', {path: '/'});
+        }
+        $(document).on('click', 'a[href*="/question/"]', function(){
+            $.cookie.set('IK_REFER_QID', F.context('page').qid, {
+                expires: 20000,
+                path: '/'
+            });
+        });
+                    new LeftPromotion({
+                imgSrc: 'http:\/\/iknow02.bosstatic.bdimg.com\/zhidao_na\/%E7%83%AD%E5%8A%9B%E6%B3%A2\/G20_PCbanner120x180.gif?t=' + (new Date()).getTime(),
+                url: 'http:\/\/zhidao.baidu.com\/itopic\/hotspotindex?tid=131'
+            });
+
+            log.addKey({
+                qbleftpromotion: 1
+            });
+        
+                            $(document).on('click', '.ikqb_img_alink', function(evt){
+                if($.browser.msie&&$.browser.version==6){
+                    return false;
+                }
+                var imgTarget = $(this).find('img'),
+                    imgBigSrc = $(this).attr('href'),
+                    maxWidth = $(this).parent('p').outerWidth(),
+                    imgSmallSrc = imgTarget.attr('esrc'),
+                    sourceWidth = imgTarget.width(),
+                    sourceHeight = imgTarget.height();
+
+                if(imgTarget.hasClass('img_show')){
+                    imgTarget.attr('src',imgBigSrc);
+                    if(!imgTarget.hasClass('ikqb_img')){
+                        imgTarget.removeClass('ikqb_img');
+                        imgTarget.animate({
+                            'width':'100%'
+                        },500);
+                    }else{
+                        imgTarget.animate({
+                            'maxWidth':'500px',
+                            'maxHeight':'340px'
+                        },500);
+                    }
+                    imgTarget.removeClass('img_show');
+                }else{
+                    $(this).append('<i class="ikqb_img_loading"></i>');
+                    var bigImg = new Image();
+                    bigImg.onload = function(){
+                        imgTarget.attr('src',imgBigSrc);
+                        if(sourceWidth == bigImg.width){
+                            imgTarget.removeClass('ikqb_img');
+                            imgTarget.animate({
+                                'width':'120%'
+                            },500);
+                        }else{
+                            imgTarget.animate({
+                                'maxWidth':bigImg.width>maxWidth?maxWidth:bigImg.width,
+                                'maxHeight':bigImg.height
+                            },500);
+                        }
+                        imgTarget.addClass('img_show');
+                        $('.ikqb_img_loading').remove();
+                    }
+                    bigImg.src = imgBigSrc;
+                }
+                evt.preventDefault();
+            });
+                $('#search-form').submit(function(e) {
+            log.send({
+                type: 2014, 
+                page: 'question', 
+                position: 'searchbtn',
+                action: 'click'
+            });
+            e.preventDefault();
+        });
+    });
+    
+    //统计QB页用户名片的展现量、查看QB页用户名片的用户数
+    $('.user-name').on('mouseenter', function (e) {
+        log.send({
+            'page': 'qb',
+            'type': 2060,
+            'action': 'hover',
+            'area': 'user-name'
+        });
+    }).on('click', function (e) {
+        log.send({
+            'page': 'qb',
+            'type': 2060,
+            'action': 'click',
+            'area': 'user-name'
+        });
+    });
+    //“向TA求助”的点击量、点击用户数
+    $('body').on('click', '.fixed-ask, .fixed-ask-e', function (e) {
+        log.send({
+            'page': 'qb',
+            'type': 2060,
+            'action': 'click',
+            'area': 'fixed-ask'
+        });
+    });
+    // “举报“下“描述不清”等三项的展现量（PV）、  “描述不清”等三项的点击总量、 “描述不清”等三项的点击用户数
+    $('body').on('mouseenter', '.wgt-accuse .accuse-enter', function (e) {
+        log.send({
+            'page': 'qb',
+            'type': 2060,
+            'action': 'hover',
+            'area': 'accuse-enter'
+        });
+    }).on('click', '.wgt-accuse a', function (e) {
+        log.send({
+            'page': 'qb',
+            'type': 2060,
+            'action': 'click',
+            'area': 'wgt-accuse-a'
+        });
+    });
+
+    // 新增分享打点统计
+    if ($.url.getQueryValue(location.href, 'sharesource')) {
+        log.send({
+            module: 'question',
+            page: 'qb',
+            project: 'new-qb-share',
+            postion: 'new-share',
+            action: 'view-by-share-' + $.url.getQueryValue(location.href, 'sharesource')
+        });
+    }
+
+    // 个人行家回答特型tooltip
+    var mavinTips = [];
+    var mavinTimeout = [];
+    $('.mavin-reply-icon').each(function (index) {
+        var me = this;
+        var mavinLevelTitle = $(this).attr('data-title');
+        var mavinMajor = $(this).attr('data-major');
+        var content = '<p class="mavin-reply-tip"><span class="mr-5">[' + mavinLevelTitle + ']</span>已完成<span class="enhance">实名认证</span>+<span class="enhance">行业认证</span>';
+        if (mavinMajor == 1) {
+            content += '+<span class="enhance">专业认证</span>';
+        }
+        content += '</p>';
+
+        $(this).mouseenter(function (e) {
+            $('div[role="tooltip"]').hide();
+            clearTimeout(mavinTimeout[index]);
+            mavinTimeout[index] = setTimeout(function () {
+
+                if (!mavinTips[index]) {
+                    mavinTips[index] = new Tip({
+                        'target': me,
+                        'tooltipClass' : 'tip-white',
+                        'autoDispose': false,
+                        'direction': 'top',
+                        'content': content,
+                        'position': {
+                            my: 'left-20 top'
+                        }
+                    });
+                }
+                mavinTips[index].show();
+            }, 70);
+
+        }).mouseleave(function (e) {
+            mavinTimeout[index] = setTimeout(function () {
+                mavinTips[index] && mavinTips[ index ].hide();
+            }, 70);
+        });
+    });
+    window.onload = function () {
+
+        var sendLog = function() {
+            var is_topads_truely_show = null;           // 顶部网盟
+            var is_bottomwangmeng_truely_show = null;   // 底部网盟为你推荐
+            var is_leftads_truely_show = null;          // 实际展示左下广告
+            var is_rightads_truely_show = null;         // 实际展示左下广告
+            
+            // 顶部网盟广告 -- 从元素高度判断
+            if (F.context('ads_log_toprequest')) {
+                if ($('.left-top-ads').height() == 0
+                    || $('.left-top-ads').width() == 0) {
+                    is_topads_truely_show = 0;
+                } else {
+                    is_topads_truely_show = 1;
+                }
+            } else {
+                is_topads_truely_show = 0;
+            }
+
+            // 底部为你推荐网盟广告 -- 从iframe判断
+            if (F.context('ads_log_bottomrequest')) {
+                if ($('.wgt-bottom-union').find('iframe').size() == 0) {
+                    is_bottomwangmeng_truely_show = 0;
+                } else {
+                    is_bottomwangmeng_truely_show = 1;
+                }
+            } else {
+                is_bottomwangmeng_truely_show = 0;
+            }
+
+            // 同步凤巢广告 -- 从元素高度判断
+            if (F.context('ads_log_leftdown')) {
+                if ($('#qbleftdown-container').height() == 0
+                    || $('#qbleftdown-container').width() == 0) {
+                    is_leftads_truely_show = 0;
+                } else {
+                    is_leftads_truely_show = 1;
+                }
+            } else {
+                is_leftads_truely_show = 0;
+            }
+
+            // 同步右侧广告，看是否存在dom以及是否展示
+            if (F.context('ads_log_right')) {
+                if ($('.widget-sma').height() == 0
+                    || $('.widget-sma').width() == 0) {
+                    is_rightads_truely_show = 0;
+                } else {
+                    is_rightads_truely_show = 1;
+                }
+            } else {
+                is_rightads_truely_show = 0;
+            }
+
+            // 得到浏览器信息
+            function getBrowserType() {
+                if (navigator.userAgent.toLowerCase().indexOf('se 2.x')>-1) {
+                    return 'Sougo';
+                } else if (navigator.userAgent.toLowerCase().indexOf('maxthon')>-1) {
+                    return 'maxthon';
+                } else if (navigator.userAgent.toLowerCase().indexOf('qqbrowser')>-1) {
+                    return 'qqbrowser';
+                } else if (navigator.userAgent.toLowerCase().indexOf('msie')>-1) {
+                    return 'IE';
+                } else if (/chrome\/(\d+\.\d+)/i.test(navigator.userAgent)) {
+                    return 'Chrome';
+                } else if (/firefox\/(\d+\.\d+)/i.test(navigator.userAgent)) {
+                    return 'Firefox';
+                } else {
+                    return 'other';
+                }
+            }
+            var browsert_type = getBrowserType();
+
+            var adsLogParams = {
+                type: 2014,
+                page: 'question', 
+                action: 'ads_block_info_hour',
+                is_topwangmeng_should_show: F.context('ads_log_toprequest') || 0,
+                is_topwangmeng_truely_show: is_topads_truely_show,
+                is_bottomwangmeng_should_show: F.context('ads_log_bottomrequest') || 0,
+                is_bottomwangmeng_truely_show: is_bottomwangmeng_truely_show,
+                is_leftads_should_show: F.context('ads_log_leftdown') || 0,
+                is_leftads_truely_show: is_leftads_truely_show,
+                is_rightads_should_show: F.context('ads_log_right') || 0,
+                is_rightads_truely_show: is_rightads_truely_show,
+                browser_type: browsert_type
+            };
+
+            log.send(adsLogParams);
+        };
+
+        setTimeout(sendLog, 1000);
+    };
+    /*
+     * 设置hunter用户体验报告
+     * @FE-hanzonge @PM-liulin04
+     * @date 2016-01-05
+     *
+     * 模糊匹配：mid=73716，取一定量pv
+     * 非模糊匹配：mid-qid映射关系为，
+     *      73707->124553427
+     *      73708->258966527
+     *      73709->145354616
+     *      73710->1509811702495467100
+     *      73711->334249256
+     */
+    window.Hunter = window.Hunter || {};
+    Hunter.userConfig = Hunter.userConfig || [];
+    var tempHid = null;
+    var pageQid = F.context('page').qid;
+    
+    if (pageQid == 124553427) {
+        tempHid = 73707;
+    } else if (pageQid == 258966527) {
+        tempHid = 73708;
+    } else if (pageQid == 145354616) {
+        tempHid = 73709;
+    } else if (pageQid == 1509811702495467100) {
+        tempHid = 73710;
+    } else if (pageQid == 334249256) {
+        tempHid = 73711;
+    } else {
+        if (parseInt(Math.random()*100) < 5) {
+            tempHid = 73716;
+        }
+    }
+
+    if (tempHid) { 
+        Hunter.userConfig.push({
+            hid: tempHid
+        });
+    }
+    function jumpShare() {
+
+        if ($('.jump-top-box').size() != 0) {
+            // 调整返回顶部和任务列表的顺序
+            $('.jump-top-box').find('.jump-top').before($('.jump-top-box').find('.jump-task-list'));
+
+            // 加入分享功能
+            var jumpShare = [
+                '<div class="jump-share">',
+                    '<div class="jump-share-tit">分享</div>',
+                    '<div class="share-area"></div>',
+                '</div>'
+            ].join('');
+
+            $('.jump-top-box').find('.jump-task-list').before(jumpShare);
+
+            share.init({
+                target: $('.jump-share .share-area'),
+                pageUrl: 'http://zhidao.baidu.com/question/' + F.context('page').qid,
+                title: document.title,
+                pos: 'rightSilde',
+                logOpt: {
+                    module: 'question',
+                    page: 'qb',
+                    project: 'new-qb-share',
+                    postion: 'new-share-right'
+                }
+            });
+            // 如果有行家工作室，放在最顶部
+            if ($('.jump-top-box').find('.jump-goto-mavin').size()) {
+                $('.jump-top-box').find('.jump-share').before($('.jump-top-box').find('.jump-goto-mavin'));
+            }
+
+            jumpTimer && clearInterval(jumpTimer);
+        }
+    }
+
+    var jumpTimer = setInterval(function () {
+        jumpShare();
+    }, 1000)
+
+
+
+
+});
+
+}();
+!function(){								                				require.async('common:widget/js/logic/dom-ready/dom-ready.js', function(D){ D.init([]) });
+            }();
+</script>    
+<script type="text/javascript">
+    require.async('common:widget/lib/jquery/jquery.js', function ($) {
+        //  var ie = /msie (\d+\.\d+)/i.test(navigator.userAgent) ? (document.documentMode || +RegExp['$1']) : undefined;
+        if (!/chrome|firefox|safari|msie 10|rsv:11|msie [89]/i.test(navigator.userAgent)) {
+            return;
+        }
+
+        window.BaiduHttps = window.BaiduHttps || {};
+        window.BaiduHttps.callbacks = function (data) {
+            if (data && data.s === 0) {
+                window.supportHttps = 1;
+                setTimeout(function () {
+                    $('a[href^="http://www.baidu.com/s?"]').each(function (index, item) {
+                        var link = $(item).attr('href');
+                        if (~link.indexOf('?wd=') || ~link.indexOf('&wd=')) {
+                            link = link.replace(/^http/, 'https');
+                            $(item).attr('href', link);
+                        }
+                    });
+                }, 2000);
+            }
+        };
+
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://www.baidu.com/con?from=zhidao';
+        document.body.appendChild(script);
+    });
+</script><script type="text/javascript" src="./C# 音乐播放器怎么弄_百度知道_files/_con"></script>
+
+<div class="jump-top-box" style="right: 5px; top: 138px;"><div class="jump-share"><div class="jump-share-tit">分享</div><div class="share-area"><div class="others-share"><a href="javascript:void(0)" target="_blank" class="others-share-item weixin iknow-qb_share_icons" data-type="weixin-click"></a><a href="http://v.t.sina.com.cn/share/share.php?url=http%3A%2F%2Fzhidao.baidu.com%2Fquestion%2F168041777%3Fsharesource%3Dweibo&amp;title=C%23%20%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E6%80%8E%E4%B9%88%E5%BC%84_%E7%99%BE%E5%BA%A6%E7%9F%A5%E9%81%93&amp;pic=http%3A%2F%2Fimg.baidu.com%2Fimg%2Fiknow%2Fzhidaologo.png" target="_blank" class="others-share-item weibo iknow-qb_share_icons" data-type="weibo-click"></a><a href="http://connect.qq.com/widget/shareqq/index.html?url=http%3A%2F%2Fzhidao.baidu.com%2Fquestion%2F168041777%3Fsharesource%3Dqq&amp;title=C%23%20%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E6%80%8E%E4%B9%88%E5%BC%84_%E7%99%BE%E5%BA%A6%E7%9F%A5%E9%81%93&amp;pics=http%3A%2F%2Fimg.baidu.com%2Fimg%2Fiknow%2Fzhidaologo.png" target="_blank" class="others-share-item qq iknow-qb_share_icons" data-type="qq-click"></a><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http%3A%2F%2Fzhidao.baidu.com%2Fquestion%2F168041777%3Fsharesource%3Dqzone&amp;title=C%23%20%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E6%80%8E%E4%B9%88%E5%BC%84_%E7%99%BE%E5%BA%A6%E7%9F%A5%E9%81%93&amp;pics=http%3A%2F%2Fimg.baidu.com%2Fimg%2Fiknow%2Fzhidaologo.png" target="_blank" class="others-share-item qzone iknow-qb_share_icons" data-type="qzone-click"></a></div></div></div><div class="jump-task-list"><a class="open-task-list" data-action="open-task-list">任务列表</a></div><div class="jump-top" style="visibility: hidden;"><a href="http://zhidao.baidu.com/link?url=Mib8mAsoyh_rjPwxlW4RY7etdg6JRaOPTMuKZeFztc6Oo_CJJuzWJRGVAyAhSFX3lLYbdYY4pvXLR66HyMmogK#" target="_self">返回顶部</a></div><a class="gb-pr-lk" target="_blank" href="http://zhidao.baidu.com/itopic/hotspotindex?tid=135" style="height:51px;background: url(http://iknow02.bosstatic.bdimg.com/zhidao_na/%E7%83%AD%E5%8A%9B%E6%B3%A2/Wwyx_PCbanner42x51.gif) no-repeat;"></a></div><div></div></body></html>

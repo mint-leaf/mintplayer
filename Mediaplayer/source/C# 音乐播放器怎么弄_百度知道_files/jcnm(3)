@@ -1,0 +1,5 @@
+BAIDU_SSP_define({"queryid" : "d26f65450c139f7f","tuid" : "639890_0","placement" : {"basic" : {"cname":"91010099_20_cpr","conBackEnv":1,"flowType":1,"groupId":345854,"mediumType":1,"rspFormat":1,"sellType":3,"sspId":8,"tuId":639890,"userId":5552871}
+,"container" : {"anchoredType":1,"height":0,"sizeType":1,"width":0}
+,"fillstyle" : {}
+,"userdefine" : "","complement_type" : 7,"update" : "1467627538_0"},"extends" : {"ssph":0,"sspw":0}
+,"pdb_deliv" : {"deliv_id" : "2048518","deliv_des" : {"_html" : {"content":"\x3cscript type=\"text\/javascript\"\x3e\x0d\x0a    \/*知道问答页通栏*\/\x0d\x0a    var cpro_id = \"u2398732\";\x0d\x0a\x3c\/script\x3e\x0d\x0a\x3cscript src=\"http:\/\/cpro.baidustatic.com\/cpro\/ui\/c.js\" type=\"text\/javascript\"\x3e\x3c\/script\x3e","type":"rich","version":1,"unionFlag":1}},"brandad" : 0},"order_deliv" : {"deliv_id" : "0","demand_id" : "0"},"rtb_deliv" : {"deliv_id" : "0","demand_id" : "0"},"media_protect" : ""});

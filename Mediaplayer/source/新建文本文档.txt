@@ -1,0 +1,824 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.IO;
+using System.Drawing.Imaging;
+using System.Threading;
+namespace MyMusicBox
+{
+  public partial class MainForm : Form
+  {
+    public MainForm()
+    {
+      InitializeComponent();
+      SetStyle(ControlStyles.UserPaint, true);
+      SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+      SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+      SetStyle(ControlStyles.DoubleBuffer, true); 
+      
+    }
+    Song mySong = null;//播放的歌曲对象
+    ListViewItem itemLrc;//打开歌词路径项
+    Bitmap bm ;//用于动态设置LV背景
+    public SavingInfo sa = null;//持久化信息类
+    Thread thread;//后台线程
+  
+    #region 加载事件
+    private void MainForm_Load(object sender, EventArgs e)
+    {
+        //调用读取配置文件方法
+        Path.ReadPath();
+        //窗体背景设置为配置文件中的图片
+        this.BackgroundImage = Image.FromFile(Path.bgPath);
+        //调用读取文件目录方法
+        Path.ReadSong();
+        //读取播放列表
+        sa = new SavingInfo();
+        sa.LoadPlayList();
+        //绑定LV
+        BindAllLV();
+        BindPlayLV();
+        SetLV();
+        SetLrcBG();
+        timer1.Enabled = Path.Playing;
+        //显示时间
+        lblTime.Text = System.DateTime.Now.ToString();
+        //两个lbl用来根据歌曲总长和播放长度显示进度，设置位置重叠
+        lblRuning.Location = lblLong.Location;
+        //启动线程
+        thread = new Thread(Renovate);
+        thread.IsBackground = true;
+        thread.Start();
+       
+    }
+    #endregion
+    #region 后台刷新
+    /// <summary>
+    /// 时间计数状态等刷新
+    /// </summary>
+    private void Renovate()
+    {
+      //while (true)
+      //{
+      //  //计数
+      //  Count();
+      //  //获取当前时间
+      //  lblTime.Text = System.DateTime.Now.ToString();
+      //  //无歌曲提示，如果播放列表为空且当前播放列表为显示状态
+      //  if (lvPlay.Items.Count == 0 && lvPlay.Visible)
+      //    lblTs.Visible = true;
+      //  else
+      //    lblTs.Visible = false;
+      //  Thread.Sleep(1000);
+      //}
+    }
+    #endregion
+    #region 设置LV背景
+    /// <summary>
+    /// 设置LV背景
+    /// </summary>
+    public void SetLV()
+    {
+      bm = new Bitmap(this.BackgroundImage, this.Width, this.Height);
+      //绘制矩形，定义起始位置和宽高
+      Rectangle r = new Rectangle(lvPlay.Location.X, lvPlay.Location.Y, lvPlay.Width, lvSong.Height);
+      //按矩形尺寸和起始位置截取bm的一部分
+      bm= bm.Clone(r,bm.PixelFormat);
+      //把截取到的图片设置为lv背景，达到与主窗体背景完美契合的效果
+      lvSong.BeginUpdate();
+      lvSong.BackgroundImage = (Image)bm;
+      lvSong.EndUpdate();
+      lvPlay.BeginUpdate();
+      lvPlay.BackgroundImage = (Image)bm;
+      lvPlay.EndUpdate();
+    }
+    #endregion
+     
+    #region 获取歌曲
+    /// <summary>
+    /// 获取播放歌曲
+    /// </summary>
+    private void GetSong()
+    {
+      //接收播放歌曲方法，获得一个歌曲对象
+      this.mySong = PlayList.Play();
+      //如果歌曲对象不为空
+      if (mySong != null)
+      {
+        //播放器路径设置为该歌曲路径
+        wmp.URL = mySong.FileName;
+        //调用方法，显示歌曲名、歌手
+        lblName.Text = PlayList.GetName();
+        lblSinger.Text = PlayList.GetSinger();
+        mySong.SongState = SongPlayState.played;//修改播放状态
+        //播放按钮图片修改为暂停图片
+        btnPlay.Image = Image.FromFile("Images\\stop.png"); 
+        try
+        {
+           
+          //读取歌词路径
+          Path.ReadLrc();
+          AddLrc();
+          //启动一个定时器，此定时器只控制歌词轮播
+          timer2.Start();
+        }
+        catch (Exception)
+        {
+          LrcNull();
+          itemLrc = new ListViewItem();
+          itemLrc.SubItems.Add("找不到该歌曲歌词文件！");
+          itemLrc.ForeColor = Color.Blue;
+          itemLrc.Font = new Font("微软雅黑", 14.25F, ((FontStyle)((FontStyle.Bold | FontStyle.Underline))), GraphicsUnit.Point, ((byte)(134)));
+          lvLrc.Items.Add(itemLrc);
+        }
+      }
+    }
+    #endregion
+    #region 主定时器
+    //定时器1
+    private void timer1_Tick(object sender, EventArgs e)
+    {
+      if (Path.songPath == "")
+      {
+        timer1.Enabled = false;
+        return;
+      }
+       
+      //如果当前无播放歌曲，调用获取歌曲的方法
+      if (this.mySong == null)
+      {
+        GetSong();
+      }
+      //自动下一首，如果当前播放完毕
+      if (this.wmp.playState == WMPLib.WMPPlayState.wmppsStopped)
+      {
+        this.mySong = null; // 将歌曲设为空
+        Path.lrcPath = "";
+        Path.dicLrc.Clear();
+        PlayModel();
+        PlayList.PlayNext();
+        Thread.Sleep(1000);
+      }
+      // 切歌，当前有播放歌曲且播放状态为cut
+      if (this.mySong != null && this.mySong.SongState == SongPlayState.cut)
+      {
+        this.wmp.URL = "";//置空
+        timer2.Stop();
+        Path.dicLrc.Clear();
+        Path.lrcPath = "";
+        this.mySong = null;
+      }
+      //如果当前有播放歌曲，需要获取的一些属性
+      if (wmp.URL!="")
+      {
+        //设置当前播放歌曲颜色
+        SongColor();
+        //获取音量控件显示值，根据控制刻度数量计算
+        this.trackBar1.Value = wmp.settings.volume / 10;
+        //歌曲时间显示，一个是总长度，一个是已播放长度，字符串类型
+        lblAll.Text = wmp.currentMedia.durationString;
+        lblRun.Text = wmp.Ctlcontrols.currentPositionString;
+        //进度条,使用了两个lbl控件，歌曲长度/已播放长度=lbl1的宽/lbl2的宽
+        //乘1000为防止数据过小出现错误
+        double temp = (wmp.currentMedia.duration*1000) / (wmp.Ctlcontrols.currentPosition*1000);
+        double width = lblLong.Width;
+        double avg = width / temp;
+        //判断>1为了防止avg数值小于int界限
+        if(avg>1)
+          lblRuning.Width = Convert.ToInt32(avg);
+        picRun.Left = lblRuning.Right;
+        //托盘显示播放歌曲
+        this.notifyIcon1.Text =lblName.Text + lblSinger.Text;
+      }
+    }
+    #endregion
+    #region 播放按钮
+    /// <summary>
+    /// 播放按钮，切换播放or暂停
+    /// </summary>
+    private void btnPlay_Click(object sender, EventArgs e)
+    {
+      if(!timer1.Enabled)
+        timer1.Start();
+      //如果当前为正在播放
+      if (wmp.playState == WMPLib.WMPPlayState.wmppsPlaying)
+      {
+        //暂停播放
+        wmp.Ctlcontrols.pause();
+        //按钮图片修改为播放
+        btnPlay.Image = Image.FromFile("Images\\play.png");
+        //停止控制歌词滚动的定时器
+        if (timer2.Enabled)
+          timer2.Stop();
+      }
+      else if (wmp.playState == WMPLib.WMPPlayState.wmppsPaused)
+      {
+        //开始播放
+        wmp.Ctlcontrols.play();
+        //按钮图片修改为暂停
+        btnPlay.Image = Image.FromFile("Images\\stop.png");
+        //启动歌词滚动
+        if (!timer2.Enabled&&Path.dicLrc.Count>0)
+          timer2.Start();
+      }
+    }
+    #endregion
+    #region 切歌
+    //切换下一首，调用切歌方法
+    private void btnRight_Click(object sender, EventArgs e)
+    {
+      PlayList.Cut(false);
+    }
+    //上一首，调用切歌方法
+    private void btnLeft_Click(object sender, EventArgs e)
+    {
+      PlayList.Cut(true);
+    }
+    #endregion
+    #region 音量
+    //静音，静音！=音量为0
+    private void btnModel_Click(object sender, EventArgs e)
+    {
+      //如果播放器非静音状态，前景文字显示红叉，状态改为静音
+      if (wmp.settings.mute == false)
+      {
+        btnSound.Text = "×";
+        wmp.settings.mute = true;
+      }
+      else//反之，已是静音状态，清空红叉，设置非静音状态
+      {
+        btnSound.Text = "";
+        wmp.settings.mute = false;
+      }
+    }
+    //设置音量，此事件为控制刻度值变化时
+    private void trackBar1_Scroll(object sender, EventArgs e)
+    {
+      //音量设置为控制刻度*10（因为初始化的时候是/10）
+      wmp.settings.volume = this.trackBar1.Value * 10;
+    }
+    #endregion
+    #region 歌曲列表操作
+    /// <summary>
+    /// 绑定所有歌曲LV数据
+    /// </summary>
+    private void BindAllLV()
+    {
+      //如果所有歌曲集合为空，结束
+      if (PlayList.song == null)
+        return;
+      lvSong.Items.Clear();
+      //遍历集合绑定到所有歌曲LV
+      foreach (Song s in PlayList.song)
+      {
+        ListViewItem item = new ListViewItem(s.Name);
+        item.Tag = s;
+        item.SubItems.Add(s.Singer);
+        lvSong.Items.Add(item);
+      }
+    }
+    //点击显示所有歌曲
+    private void tslblAll_Click(object sender, EventArgs e)
+    {
+      //隐藏播放列表
+      lvPlay.Visible = false;
+      //两个LV位置重叠
+      lvSong.Location = lvPlay.Location;
+      //点击后改变背景色
+      tslblAll.BackColor = Color.Silver;
+      tslblPlay.BackColor = Color.Transparent;
+      //显示所有歌曲LV
+      lvSong.Visible = true;
+    }
+    //点击显示播放列表
+    private void tslblPlay_Click(object sender, EventArgs e)
+    {
+      //调用绑定播放LV数据
+      BindPlayLV();
+      //背景色改变
+      tslblPlay.BackColor = Color.Silver;
+      tslblAll.BackColor = Color.Transparent;
+      //隐藏所有歌曲LV
+      lvSong.Visible = false;
+      //显示播放LV
+      lvPlay.Visible = true;
+    }
+    /// <summary>
+    /// 绑定播放列表
+    /// </summary>
+    private void BindPlayLV()
+    {
+      //如果播放集合不为空
+      if (PlayList.play!=null)
+      {
+        lvPlay.Items.Clear();
+        //遍历集合绑定播放LV
+        foreach (Song s in PlayList.play)
+        {
+          int id = lvPlay.Items.Count + 1;
+          s.Id = id;
+          ListViewItem item = new ListViewItem(id.ToString());
+          item.SubItems.Add(s.Name);
+          item.Tag = s;
+          lvPlay.Items.Add(item);
+        } 
+      }
+    }
+    /// <summary>
+    /// 歌曲计数
+    /// </summary>
+    private void Count()
+    {
+      //if (lvSong.Visible)
+      //  lblCount.Text = "已选" + lvSong.CheckedItems.Count + "\\总" + lvSong.Items.Count;
+      //if (lvPlay.Visible)
+      //  lblCount.Text = "总" + lvPlay.Items.Count;
+    }
+    #endregion
+    #region 歌词操作
+    /// <summary>
+    /// 设置歌词背景
+    /// </summary>
+    public void SetLrcBG()
+    {
+      bm = new Bitmap(this.BackgroundImage, this.Width, this.Height);
+      //绘制矩形，定义起始位置和宽高
+      Rectangle r = new Rectangle(lvLrc.Location.X, lvLrc.Location.Y, lvLrc.Width, lvLrc.Height);
+      //按矩形尺寸和起始位置截取bm的一部分
+      bm = bm.Clone(r, PixelFormat.Undefined);
+      //把截取到的图片设置为lv背景，达到与主窗体背景完美契合的效果
+      lvLrc.BeginUpdate();
+      lvLrc.BackgroundImage = (Image)bm;
+      lvLrc.EndUpdate();
+    }
+    int nullCount;//记录空行位置
+    /// <summary>
+    /// 设置空行，使歌词局中
+    /// </summary>
+    private void LrcNull()
+    {
+      lvLrc.Items.Clear();
+      nullCount = (int)Math.Ceiling(Convert.ToDouble(lvLrc.Height / 30 / 2));
+      for (int i = 0; i <= nullCount; i++)
+      {
+        lvLrc.Items.Add("");
+      }
+    }
+    /// <summary>
+    /// 添加歌词
+    /// </summary>
+    private void AddLrc()
+    {
+      LrcNull();
+      foreach (string key in Path.dicLrc.Keys)
+      {
+        ListViewItem item = new ListViewItem();
+        item.SubItems.Add(Path.dicLrc[key]);
+        item.Tag = key;
+        lvLrc.Items.Add(item);
+      }
+    }
+    //只控制歌词轮播
+    private void timer2_Tick(object sender, EventArgs e)
+    {
+      //调用显示歌词的方法
+      ShowLrc();
+    }
+    /// <summary>
+    /// 显示歌词
+    /// </summary>
+    private void ShowLrc()
+    {
+      foreach (ListViewItem item in lvLrc.Items)
+      {
+        if (item.Tag == null)
+          continue;
+        if (item.Tag.ToString() == lblRun.Text )
+        {
+          item.ForeColor = Color.DarkOrange;
+          item.Font = new Font("华文琥珀", 16F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(134)));
+          lvLrc.Items[item.Index -1].ForeColor = Color.Silver;
+          lvLrc.Items[item.Index - 1].Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(134)));
+          if (item.Index + 1<lvLrc.Items.Count)
+            lvLrc.Items[item.Index+1].EnsureVisible();       
+        }
+      }
+    }
+    #endregion
+    #region 窗体隐藏到托盘设置
+    //最小化到托盘
+    private void btnMix_Click(object sender, EventArgs e)
+    {
+      this.Hide();
+    }
+    //主窗体大小状态变化时
+    private void MainForm_SizeChanged(object sender, EventArgs e)
+    {
+      if (this.WindowState == FormWindowState.Minimized)
+      {
+        //启动一个控件，该控制可以让程序在右下角显示图标，需要提前设置该控制显示的图标图片
+        this.notifyIcon1.Visible = true;
+      }
+    }
+    //托盘显示，双击显示窗体
+    private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+    {
+      ShowMain();
+    }
+    /// <summary>
+    /// 显示主窗体
+    /// </summary>
+    public void ShowMain()
+    {
+      if (!this.Visible)
+      {
+        this.TopMost = true;
+        this.Show();
+        this.TopMost = false;
+      }
+      else
+      {
+        this.TopMost = true;
+        this.TopMost = false;
+      }
+    }
+    //托盘打开窗体
+    private void tsmiShow_Click(object sender, EventArgs e)
+    {
+      ShowMain();
+    }
+    //托盘退出
+    private void tsmiExit_Click(object sender, EventArgs e)
+    {
+      Application.Exit();
+    }
+    #endregion
+    #region 窗体位移
+    Point mouseOff;//鼠标移动位置变量
+    bool leftFlag;//标记是否为左键
+    private void pnlMain_MouseDown(object sender, MouseEventArgs e)
+    {
+      if (e.Button == MouseButtons.Left)
+      {
+        mouseOff = new Point(-e.X, -e.Y); //得到变量的值
+        leftFlag = true; //点击左键按下时标注为true;
+      }
+    }
+    private void pnlMain_MouseMove(object sender, MouseEventArgs e)
+    {
+      if (leftFlag)
+      {
+        Point mouseSet = Control.MousePosition;
+        mouseSet.Offset(mouseOff.X, mouseOff.Y); //设置移动后的位置
+        Location = mouseSet;
+      }
+    }
+    private void pnlMain_MouseUp(object sender, MouseEventArgs e)
+    {
+      if (leftFlag)
+      {
+        leftFlag = false;//释放鼠标后标注为false;
+      }
+    }
+  #endregion
+    #region 进度条滚动块移动
+    int runX;//记录滚动块初始位置
+    private void picRun_MouseDown(object sender, MouseEventArgs e)
+    {
+      runX = e.X;
+    }
+    //释放鼠标位移，进度前进
+    private void picRun_MouseUp(object sender, MouseEventArgs e)
+    {
+      picRun.Left += e.X - runX - picRun.Width / 2;
+      if (picRun.Left > lblLong.Right)
+        picRun.Left = lblLong.Right;
+      if(picRun.Left<lblLong.Left)
+        picRun.Left = lblLong.Left;
+      if (mySong != null)
+      {
+        lblRuning.Width = picRun.Right- lblRuning.Left;
+        double temp = (lblLong.Width*1000.0 )/ (lblRuning.Width*1000.0);
+        wmp.Ctlcontrols.currentPosition = wmp.currentMedia.duration / temp;
+      }
+    }
+    #endregion
+    #region 歌曲增删操作
+    //添加歌曲到播放列表
+    private void tsmiAdd_Click(object sender, EventArgs e)
+    {
+      if (lvSong.CheckedItems.Count > 0)
+      {
+        foreach (ListViewItem item in lvSong.CheckedItems)
+        {
+           // 遍历播放集合，如果存在不添加
+           foreach (Song s in PlayList.play)
+           {
+             if (s.Name == item.Text)
+             {
+               PlayList.play.Remove(s);
+               break;
+             }
+           }
+           PlayList.play.Add(item.Tag as Song);
+        }
+      }
+    }
+    //所有歌曲：删除选中歌曲
+    private void tsmiDel_Click(object sender, EventArgs e)
+    {
+      foreach (ListViewItem item in lvSong.Items)
+      {
+        if (item.Checked)
+        {
+          PlayList.song.Remove(item.Tag as Song);
+        } 
+      }
+      BindAllLV();
+    }
+    //全选歌曲
+    private void tsmiCheck_Click(object sender, EventArgs e)
+    {
+      foreach (ListViewItem item in lvSong.Items)
+      {
+        if (tsmiCheck.Text == "全部选中")
+        {
+          item.Checked = true;
+          if(item.Index+1==lvSong.Items.Count)
+            tsmiCheck.Text = "取消选中";
+        }
+        else
+        {
+          item.Checked = false;
+          if (item.Index + 1 == lvSong.Items.Count)
+            tsmiCheck.Text = "全部选中";
+        }
+      }
+    }
+    //选中项的同时选中复选框
+    private void lvSong_MouseDown(object sender, MouseEventArgs e)
+    {
+      if (lvSong.SelectedItems.Count > 0 && e.Button == MouseButtons.Left)
+      {
+        lvSong.SelectedItems[0].Checked = true;
+      }
+    }
+    //播放列表删除事件
+    private void tsmiPlayDel_Click(object sender, EventArgs e)
+    {
+      foreach (ListViewItem item in lvPlay.Items)
+      {
+        if (item.Selected)
+        {
+          //PlayList.id = (lvPlay.Items[item.Index+1].Tag as Song).Id;
+          //this.song = null;
+          PlayList.play.Remove(item.Tag as Song);
+        }
+      }
+      BindPlayLV();
+    }
+    //清空播放列表
+    private void tsmiPlayClear_Click(object sender, EventArgs e)
+    {
+      PlayList.play.Clear();
+      this.mySong = null;
+      BindPlayLV();
+    }
+    //从播放列表删除文件
+    private void tsmiPlayDelFile_Click(object sender, EventArgs e)
+    {
+      if (lvPlay.SelectedItems.Count > 0)
+      {
+        DelFile(lvPlay.SelectedItems[0]);
+      }
+    }
+    /// <summary>
+    /// 删除某项对应文件
+    /// </summary>
+    /// <param name="item"></param>
+    private void DelFile(ListViewItem item)
+    {
+      try
+      {
+        string path = (item.Tag as Song).FileName;
+        File.Delete(path);
+        BindAllLV();
+        BindPlayLV();
+      }
+      catch (Exception)
+      {
+        MessageBox.Show("该文件为只读文件或用户权限不够，无法删除！");
+      }
+    }
+    //从所有歌曲中删除文件
+    private void tsmiDelFile_Click(object sender, EventArgs e)
+    {
+      if (lvSong.SelectedItems.Count > 0)
+      {
+        DelFile(lvSong.SelectedItems[0]);
+      }
+    }
+    //双击列表项播放歌曲
+    private void lvPlay_DoubleClick(object sender, EventArgs e)
+    {
+      if (!timer1.Enabled)
+      {
+        PlayList.id = (lvPlay.SelectedItems[0].Tag as Song).Id;
+        timer1.Start();
+      }
+      if (lvPlay.SelectedItems.Count > 0)
+      {
+        PlayList.id = (lvPlay.SelectedItems[0].Tag as Song).Id;
+        this.mySong = null;
+      }
+    }
+    #endregion
+    #region 设置
+    //跳转设置窗体
+    private void btnSet_Click(object sender, EventArgs e)
+    {
+      SetForm set = new SetForm();
+      set.parent = this;//把主窗体传过去
+      set.Show(this);
+    }
+    #endregion
+    #region 回滚
+    /// <summary>
+    /// 路径重置后
+    /// </summary>
+    public void Back()
+    {
+      BindAllLV();
+      PlayList.Update();
+      timer1.Start();
+    }
+    #endregion
+    #region 退出
+    //关闭时保存列表
+    private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+    {
+      if (Path.SaveList)
+        sa.SavePlayList();
+    }
+    //面板退出
+    private void btnExit_Click(object sender, EventArgs e)
+    {
+      if (Path.Exit)
+      {
+        Application.Exit();
+      }
+      else
+      {
+        this.Hide();
+      }
+    }
+  
+    #endregion
+    #region 背景颜色等变换控制
+    private void btnLeft_MouseEnter(object sender, EventArgs e)
+    {
+      ((Button)sender).BackgroundImage = Image.FromFile("Images//allbtn_highlight.png");
+    }
+    private void btnLeft_MouseLeave(object sender, EventArgs e)
+    {
+      ((Button)sender).BackgroundImage = null;
+    }
+    private void tslblPlay_MouseEnter(object sender, EventArgs e)
+    {
+      ((ToolStripLabel)sender).BackgroundImage = Image.FromFile("Images//Album_bkg_wubian.png");
+    }
+    private void tslblPlay_MouseLeave(object sender, EventArgs e)
+    {
+      ((ToolStripLabel)sender).BackgroundImage = null;
+    }
+    //选中改变颜色
+    private void lvSong_ItemChecked(object sender, ItemCheckedEventArgs e)
+    {
+      foreach (ListViewItem item in lvSong.Items)
+      {
+        if (item.Checked)
+        {
+          item.ForeColor = Color.DarkOrange;
+        }
+        else
+        {
+          item.ForeColor = Color.DimGray;
+        }
+      }
+    }
+    /// <summary>
+    /// 当前播放歌曲改变颜色
+    /// </summary>
+    private void SongColor()
+    {
+      foreach (ListViewItem item in lvPlay.Items)
+      {
+        if (item.SubItems[1].Text == lblName.Text)
+        {
+          item.ForeColor = Color.DeepSkyBlue;
+        }
+        else
+        {
+          item.ForeColor = Color.White;
+        }
+      }
+    }
+    #endregion
+    #region 选择歌词
+    private void lvLrc_MouseDown(object sender, MouseEventArgs e)
+    {
+      if (lvLrc.SelectedItems.Count>0&&lvLrc.SelectedItems[0] == itemLrc)
+      {
+        if (Path.OpenLrc())
+        {
+          AddLrc();
+          //启动一个定时器，此定时器只控制歌词轮播
+          timer2.Start();
+        }
+      }
+    }
+    #endregion
+    #region 窗体最大化设置
+    Size now;//原始尺寸
+    Point pN;//原始位置
+    //最大化
+    private void btnMax_Click(object sender, EventArgs e)
+    {
+      Size max = new Size(Screen.PrimaryScreen.WorkingArea.Width - 10, Screen.PrimaryScreen.WorkingArea.Height - 20);
+      if (this.Size != max)
+      {
+        pN = this.Location;
+        now= this.Size;
+        this.Size = max;
+        this.Left = 5;
+        this.Top = 5;
+        btnMax.Image = Image.FromFile("Images//max1.png")
+;
+      }
+      else
+      {
+        this.Location = pN;
+        this.Size = now;
+        btnMax.Image = Image.FromFile("Images//max.png");
+      }
+      SetLV();
+      SetLrcBG();
+    }
+    #endregion
+    #region 歌词、MV切换
+    private void tsmiLrc_Click(object sender, EventArgs e)
+    {
+      lvLrc.Visible = true;
+      wmp.Visible = false;
+      tsmiLrc.BackColor = Color.LawnGreen;
+      tsmiMv.BackColor = Color.Transparent;
+    }
+    private void tsmiMv_Click(object sender, EventArgs e)
+    {
+      wmp.Location = lvLrc.Location;
+      wmp.Size = lvLrc.Size;
+      lvLrc.Visible = false;
+      wmp.Visible = true;
+      tsmiLrc.BackColor = Color.Transparent;
+      tsmiMv.BackColor = Color.LawnGreen;
+    }
+    #endregion
+    #region 播放模式切换
+    /// <summary>
+    /// 播放模式
+    /// </summary>
+    private void PlayModel()
+    {
+      if (tsmiOne.Checked)
+      {
+        PlayList.PlayOne();
+      }
+      else if (tsmiSJ.Checked)
+      {
+        PlayList.PlayRandom();
+      }
+    }
+    private void tsmiXH_Click(object sender, EventArgs e)
+    {
+      ToolStripMenuItem ts=((ToolStripMenuItem)sender);
+      foreach(ToolStripMenuItem item in tsmiModel.DropDownItems)
+      {
+        if (ts.Checked && ts == item)
+        {
+          continue;
+        }
+        else
+        {
+          item.Checked = false;
+        }
+      }
+    }
+    #endregion
+     
+  }
+}
